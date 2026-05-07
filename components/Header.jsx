@@ -14,12 +14,12 @@ export default function Header({ isHero = false }) {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
-    { href: '/services', label: 'Services' },
-    { href: '/trucks', label: 'Our Trucks' },
+    { href: '#', label: 'About Us' },
+    { href: '#', label: 'Services' },
+    { href: '#', label: 'Our Trucks' },
     // { href: '/faq', label: 'FAQ' },
     // { href: '/clients', label: 'Our Clients' },
-    { href: '/contact', label: 'Contact Us' }
+    { href: '#', label: 'Contact Us' }
   ];
 
   return (

@@ -106,13 +106,15 @@ export default function Footer() {
             </div>
             <div className="d-flex align-items-center mb-3">
               <FontAwesomeIcon icon={faPhone} className="text-primary-orange me-3" />
-              <a href="tel:+966500000000" className="text-light text-decoration-none">
+              {/* <a href="tel:+966500000000" className="text-light text-decoration-none"> */}
+                <a href="#!" className="text-light text-decoration-none">
                 +966 50 000 0000
               </a>
             </div>
             <div className="d-flex align-items-center">
               <FontAwesomeIcon icon={faEnvelope} className="text-primary-orange me-3" />
-              <a href="mailto:info@techtruck.sa" className="text-light text-decoration-none">
+              {/* <a href="mailto:info@techtruck.sa" className="text-light text-decoration-none"> */}
+                   <a href="#!" className="text-light text-decoration-none">
                 info@techtruck.sa
               </a>
             </div>

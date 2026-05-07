@@ -9,7 +9,7 @@ export default function WhatsAppButton() {
 
   const handleClick = () => {
     // const url = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(whatsappMessage)}`;
-     const url = `#`;
+     const url = `#!`;
     window.open(url, '_blank');
   };
 

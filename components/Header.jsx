@@ -59,7 +59,8 @@ export default function Header({ isHero = false }) {
             
             <div className="d-flex align-items-center">
               <a 
-                href="https://wa.me/966500000000" 
+                href="#!" 
+                //  href="https://wa.me/966500000000"
                 className={`btn ${isHero ? 'btn-light' : 'btn-primary-orange'} rounded-pill px-3 me-3`}
                 target="_blank"
                 rel="noopener noreferrer"

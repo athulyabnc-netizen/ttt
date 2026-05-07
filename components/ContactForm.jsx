@@ -39,8 +39,8 @@ export default function ContactForm() {
     {
       icon: faPhone,
       title: 'Phone',
-      content: '+966 50 000 0000',
-      href: 'tel:+966500000000'
+      content: '#',
+      href: '#'
     },
     {
       icon: faEnvelope,

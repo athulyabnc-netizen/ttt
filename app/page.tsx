@@ -123,7 +123,7 @@ export default function Home() {
                 we deliver quality service every time.
               </p>
               <div className="d-flex gap-3">
-                <a href="/about" className="btn btn-primary-orange rounded-pill">
+                <a href="#" className="btn btn-primary-orange rounded-pill">
                   View  More
                 </a>
                 {/* <a href="/contact" className="btn btn-outline-primary-blue rounded-pill">
@@ -438,7 +438,7 @@ export default function Home() {
     </div>
 
     <div className="text-center mt-5">
-      <a href="/services" className="btn btn-primary-blue px-4">
+      <a href="#!" className="btn btn-primary-blue px-4">
         View All Services →
       </a>
     </div>
@@ -450,10 +450,10 @@ export default function Home() {
           <h2 className="fw-bold mb-3">Ready to Transport with Us?</h2>
           <p className="mb-4">Get in touch today for a free quote and consultation</p>
           <div className="d-flex justify-content-center gap-3">
-            <a href="/contact" className="btn btn-light btn-lg rounded-pill px-4">
+            <a href="#!" className="btn btn-light btn-lg rounded-pill px-4">
               Enquire now
             </a>
-            <a href="tel:+966500000000" className="btn btn-outline-light btn-lg rounded-pill px-4">
+            <a href="#!" className="btn btn-outline-light btn-lg rounded-pill px-4">
               Call Now
             </a>
           </div>

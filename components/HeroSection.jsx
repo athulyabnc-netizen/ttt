@@ -15,7 +15,7 @@ const slides = [
     buttons: [
       // { text: 'Get Quote', link: '/contact', icon: faPhone, class: 'btn-light' },
       // { text: 'WhatsApp Us', link: 'https://wa.me/966500000000', icon: faWhatsapp, class: 'btn-success', external: true }
-        { text: 'View More', link: '/about', icon: faTruck, class: 'btn-slider' },
+        { text: 'View More', link: '/#', icon: faTruck, class: 'btn-slider' },
     ],
     // stats: [
     //   { icon: faTruck, title: '24/7 Service', subtitle: 'Always available' },
@@ -29,7 +29,7 @@ const slides = [
     subtitle: 'Advanced Lifting Solutions for Construction',
     // description: 'State-of-the-art cranes and heavy machinery for all your project requirements. Professional operators and safety-first approach.',
     buttons: [
-      { text: 'View More', link: '/about', icon: faTruck, class: 'btn-slider' },
+      { text: 'View More', link: '/#', icon: faTruck, class: 'btn-slider' },
       // { text: 'Book Now', link: '/contact', icon: faPhone, class: 'btn-warning' }
     ],
     // stats: [
@@ -46,7 +46,7 @@ const slides = [
     buttons: [
       // { text: 'Our Services', link: '/services', icon: faTruck, class: 'btn-info' },
       // { text: 'Contact Team', link: '/contact', icon: faPhone, class: 'btn-success' }
-        { text: 'View More', link: '/about', icon: faTruck, class: 'btn-slider' },
+        { text: 'View More', link: '/#', icon: faTruck, class: 'btn-slider' },
     ],
     // stats: [
     //   { icon: faTruck, title: '10+ Years', subtitle: 'Experience' },

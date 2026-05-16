@@ -9,9 +9,9 @@ const slides = [
   {
     id: 1,
     image: '/banner/hero-img-1.jpg',
-    title: 'Professional Truck Rental Services',
-    subtitle: 'Heavy Transport Solutions Across Saudi Arabia',
-    // description: 'Your trusted partner for reliable transportation solutions across the Kingdom. From heavy equipment moving to emergency transport, we\'ve got you covered.',
+    title: 'Rental for heavy trucks ',
+    subtitle: 'Advanced solutions for seamless logistics',
+    // description: 'With seamless rental service we ensure no barriers while you serve',
     buttons: [
       // { text: 'Get Quote', link: '/contact', icon: faPhone, class: 'btn-light' },
       // { text: 'WhatsApp Us', link: 'https://wa.me/966500000000', icon: faWhatsapp, class: 'btn-success', external: true }
@@ -25,9 +25,9 @@ const slides = [
   {
     id: 2,
     image: '/banner/hero-img-2.jpg',
-    title: 'Crane Rental & Heavy Equipment',
-    subtitle: 'Advanced Lifting Solutions for Construction',
-    // description: 'State-of-the-art cranes and heavy machinery for all your project requirements. Professional operators and safety-first approach.',
+    title: 'Onsite rental delivery ',
+    subtitle: 'Vehicles that saves your time and effort',
+    // description: 'Onsite delivery of rental vehicles with best customer support services.',
     buttons: [
       { text: 'View More', link: '/#', icon: faTruck, class: 'btn-slider' },
       // { text: 'Book Now', link: '/contact', icon: faPhone, class: 'btn-warning' }
@@ -40,9 +40,9 @@ const slides = [
   {
     id: 3,
     image: '/banner/hero-img-3.jpg',
-    title: 'Complete Logistics Solutions',
-    subtitle: 'End-to-End Supply Chain Management',
-    description: 'Comprehensive logistics services tailored to your specific industry needs. From warehousing to final delivery, we handle it all.',
+    title: 'Rent out Efficiency',
+    subtitle: 'Well maintained trucks for cargo services',
+    // description: 'Comprehensive logistics services tailored to your specific industry needs. From warehousing to final delivery, we handle it all.',
     buttons: [
       // { text: 'Our Services', link: '/services', icon: faTruck, class: 'btn-info' },
       // { text: 'Contact Team', link: '/contact', icon: faPhone, class: 'btn-success' }
@@ -108,7 +108,7 @@ export default function HeroSection() {
       <div className="position-relative z-1 d-flex align-items-center" style={{ minHeight: '100vh' }}>
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-12">
               <div className="text-white">
                 <h1 className="display-3 fw-bold mb-4">
                   {currentSlideData.title}

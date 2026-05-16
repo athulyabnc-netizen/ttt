@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { 
   faFacebook,
-  faTwitter,
+  faXTwitter,
   faInstagram,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
@@ -33,7 +33,7 @@ export default function Footer() {
 
   const socialLinks = [
     { href: '#', icon: faFacebook, label: 'Facebook' },
-    { href: '#', icon: faTwitter, label: 'Twitter' },
+    { href: '#', icon: faXTwitter, label: 'Twitter' },
     { href: '#', icon: faInstagram, label: 'Instagram' },
     { href: '#', icon: faLinkedin, label: 'LinkedIn' }
   ];
@@ -45,19 +45,19 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-lg-4 mb-4">
             <div className="d-flex align-items-center mb-3">
-              <FontAwesomeIcon icon={faTruck} className="text-primary-orange me-2 fs-4" />
-              <h4 className="mb-0">TechTruck Transport</h4>
+            <img src="images/ttt-logo-white.png"   alt="TechTruck Transport"
+    style={{ height: '80px', transition: '0.3s' }}/>
             </div>
             <p className="text-light">
-              Your trusted partner for truck rental and logistics services across Saudi Arabia. 
-              We provide reliable, efficient, and professional transportation solutions for all your needs.
+              Tech Truck provides you with vehicle rental services for your logistics operations.
+              Well maintained trucks rented out for keeping your logistics activities seamless and break free.
             </p>
             <div className="d-flex gap-3 mt-3">
               {socialLinks.map((social, index) => (
                 <a 
                   key={index}
                   href={social.href}
-                  className="text-light fs-5 hover-primary-orange"
+                  className="text-light fs-5 social-hover-pop"
                   aria-label={social.label}
                 >
                   <FontAwesomeIcon icon={social.icon} />
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="col-lg-4  mb-4">
-            <h5 className="text-primary-orange mb-3">Quick Links</h5>
+            <h5 className="text-white mb-3">Quick Links</h5>
             <ul className="list-unstyled">
               {quickLinks.map((link, index) => (
                 <li key={index} className="mb-2">
@@ -96,25 +96,25 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="col-lg-4 mb-4">
-            <h5 className="text-primary-orange mb-3">Contact Info</h5>
+            <h5 className="text-white mb-3">Contact Info</h5>
             <div className="d-flex align-items-center mb-3">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="text-primary-orange me-3" />
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="text-white me-3 hover-primary-orange" />
               <div>
-                <p className="mb-0 text-light">Riyadh, Saudi Arabia</p>
-                <p className="mb-0 text-light">Kingdom of Saudi Arabia</p>
+                {/* <p className="mb-0 text-light">Riyadh, Saudi Arabia</p> */}
+                <p className="mb-0 text-light hover-primary-orange">Kingdom of Saudi Arabia</p>
               </div>
             </div>
             <div className="d-flex align-items-center mb-3">
-              <FontAwesomeIcon icon={faPhone} className="text-primary-orange me-3" />
+              <FontAwesomeIcon icon={faPhone} className="text-white me-3 hover-primary-orange" />
               {/* <a href="tel:+966500000000" className="text-light text-decoration-none"> */}
-                <a href="#!" className="text-light text-decoration-none">
+                <a href="#!" className="text-light text-decoration-none hover-primary-orange">
                 +966 50 000 0000
               </a>
             </div>
             <div className="d-flex align-items-center">
-              <FontAwesomeIcon icon={faEnvelope} className="text-primary-orange me-3" />
+              <FontAwesomeIcon icon={faEnvelope} className="text-white me-3 hover-primary-orange" />
               {/* <a href="mailto:info@techtruck.sa" className="text-light text-decoration-none"> */}
-                   <a href="#!" className="text-light text-decoration-none">
+                   <a href="#!" className="text-light text-decoration-none hover-primary-orange">
                 info@techtruck.sa
               </a>
             </div>
@@ -126,12 +126,12 @@ export default function Footer() {
         <div className="row align-items-center">
           <div className="col-md-6">
             <p className="mb-0 text-light">
-              © {new Date().getFullYear()} TechTruck Transport. All rights reserved.
+              © {new Date().getFullYear()} Tech Truck Transport. All rights reserved.
             </p>
           </div>
           <div className="col-md-6 text-md-end">
             <p className="mb-0 text-light">
-              Powered By <span className="text-primary-orange"></span> brandsncodes
+              Site by <a href="https://brandsncodes.com" target="_blank" rel="noopener noreferrer" className="text-light" style={{ textDecoration: 'none' }}>brandsncodes</a>
             </p>
           </div>
         </div>

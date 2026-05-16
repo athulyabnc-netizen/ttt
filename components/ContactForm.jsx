@@ -23,30 +23,41 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! We will contact you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
+    (async () => {
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        const data = await res.json();
+        if (res.ok && data.success) {
+          alert('Thank you — your message was sent. We will contact you soon.');
+          setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+        } else {
+          console.error('Send failed:', data);
+          alert('Sorry, something went wrong sending your message.');
+        }
+      } catch (err) {
+        console.error('Send error:', err);
+        alert('Unable to send message at this time.');
+      }
+    })();
   };
 
   const contactInfo = [
     {
       icon: faPhone,
       title: 'Phone',
-      content: '#',
-      href: '#'
+      content: '+966 50 000 0000',
+      href: 'tel:+966500000000'
     },
     {
       icon: faEnvelope,
       title: 'Email',
-      content: 'info@techtruck.sa',
-      href: 'mailto:info@techtruck.sa'
+      content: 'athulyabnc@gmail.com',
+      href: 'mailto:athulyabnc@gmail.com'
     },
     {
       icon: faMapMarkerAlt,
@@ -63,119 +74,126 @@ export default function ContactForm() {
   ];
 
   return (
-    <section className="py-5 bg-light">
+    <section className="contact-section py-6">
+      <div className="floating-shapes" aria-hidden>
+        <span className="shape shape-1"></span>
+        <span className="shape shape-2"></span>
+        <span className="shape shape-3"></span>
+      </div>
+
       <div className="container">
-        <div className="row">
-          <div className="col-lg-4 mb-4">
-            <div className="contact-info">
-              <h3 className="text-primary-blue mb-4">Get in Touch</h3>
-              {contactInfo.map((info, index) => (
-                <div className="contact-item mb-4" key={index}>
-                  <div className="d-flex align-items-start">
-                    <div className="icon-box bg-primary-orange bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style={{ width: '50px', height: '50px' }}>
-                      <FontAwesomeIcon icon={info.icon} className="text-primary-orange fs-5" />
+        <div className="row align-items-center gx-5">
+          <div className="col-lg-5 mb-4">
+            <div className="contact-left p-5">
+              <h3 className="mb-3 text-white display-6 fw-semibold">Get in touch</h3>
+              <p className="text-white-90 mb-4">We're available 24/7 to help with quotes, bookings and emergency transport.</p>
+
+              <div className="contact-list">
+                {contactInfo.map((info, index) => (
+                  <a
+                    key={index}
+                    href={info.href}
+                    className="contact-item d-flex align-items-center mb-3 text-white text-decoration-none"
+                    onClick={() => {}}
+                  >
+                    <div className="contact-icon me-3 d-flex align-items-center justify-content-center">
+                      <FontAwesomeIcon icon={info.icon} className="icon-svg" />
                     </div>
                     <div>
-                      <h5 className="text-primary-blue mb-1">{info.title}</h5>
-                      {info.href !== '#' ? (
-                        <a href={info.href} className="text-muted text-decoration-none">
-                          {info.content}
-                        </a>
-                      ) : (
-                        <p className="text-muted mb-0">{info.content}</p>
-                      )}
+                      <div className="small text-white-70">{info.title}</div>
+                      <div className="fw-medium">{info.content}</div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  </a>
+                ))}
+              </div>
+
+              <div className="mt-4">
+                <a href="tel:+966500000000" className="btn premium-cta me-2">Call Now</a>
+                <a href="https://wa.me/966500000000" target="_blank" rel="noreferrer" className="btn secondary-cta">WhatsApp</a>
+              </div>
             </div>
           </div>
-          
-          <div className="col-lg-8">
-            <div className="card border-0 shadow-sm">
-              <div className="card-body p-5">
-                <h3 className="text-primary-blue mb-4">Send us a Message</h3>
-                <form onSubmit={handleSubmit}>
-                  <div className="row">
-                    <div className="col-md-6 mb-3">
-                      <label htmlFor="name" className="form-label text-primary-blue">Name *</label>
-                      <input 
-                        type="text" 
-                        className="form-control" 
-                        id="name" 
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    <div className="col-md-6 mb-3">
-                      <label htmlFor="email" className="form-label text-primary-blue">Email *</label>
-                      <input 
-                        type="email" 
-                        className="form-control" 
-                        id="email" 
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
+
+          <div className="col-lg-7">
+            <div className="contact-right p-5">
+              <h4 className="mb-4 fw-semibold">Send us a message</h4>
+              <form onSubmit={handleSubmit}>
+                <div className="row g-3">
+                  <div className="col-md-6">
+                    <label className="form-label">Name</label>
+                    <input
+                      className="form-control large-input"
+                      type="text"
+                      name="name"
+                      id="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Your full name"
+                      required
+                    />
                   </div>
-                  
-                  <div className="row">
-                    <div className="col-md-6 mb-3">
-                      <label htmlFor="phone" className="form-label text-primary-blue">Phone *</label>
-                      <input 
-                        type="tel" 
-                        className="form-control" 
-                        id="phone" 
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    <div className="col-md-6 mb-3">
-                      <label htmlFor="service" className="form-label text-primary-blue">Service Type</label>
-                      <select 
-                        className="form-select" 
-                        id="service" 
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                      >
-                        <option value="">Select a service</option>
-                        <option value="truck-rental">Truck Rental</option>
-                        <option value="crane-rental">Crane Rental</option>
-                        <option value="logistics">Logistics Transport</option>
-                        <option value="heavy-equipment">Heavy Equipment Moving</option>
-                        <option value="container">Container Transport</option>
-                        <option value="emergency">Emergency Transport</option>
-                      </select>
-                    </div>
+                  <div className="col-md-6">
+                    <label className="form-label">Email</label>
+                    <input
+                      className="form-control large-input"
+                      type="email"
+                      name="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="you@company.com"
+                      required
+                    />
                   </div>
-                  
-                  <div className="mb-3">
-                    <label htmlFor="message" className="form-label text-primary-blue">Message *</label>
-                    <textarea 
-                      className="form-control" 
-                      id="message" 
+                  <div className="col-md-6">
+                    <label className="form-label">Phone</label>
+                    <input
+                      className="form-control large-input"
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="+966 5X XXX XXXX"
+                      required
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <label className="form-label">Service</label>
+                    <select
+                      className="form-select large-input"
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                    >
+                      <option value="">Select a service</option>
+                      <option value="truck-rental">Truck Rental</option>
+                      <option value="crane-rental">Crane Rental</option>
+                      <option value="logistics">Logistics Transport</option>
+                      <option value="heavy-equipment">Heavy Equipment Moving</option>
+                      <option value="container">Container Transport</option>
+                      <option value="emergency">Emergency Transport</option>
+                    </select>
+                  </div>
+                  <div className="col-12">
+                    <label className="form-label">Message</label>
+                    <textarea
+                      className="form-control large-input"
+                      id="message"
                       name="message"
                       rows="5"
                       value={formData.message}
                       onChange={handleInputChange}
+                      placeholder="How can we help you?"
                       required
                     ></textarea>
                   </div>
-                  
-                  <div className="text-center">
-                    <button type="submit" className="btn btn-primary-orange btn-lg rounded-pill px-5">
-                      Send Message
-                    </button>
+                  <div className="col-12 text-end">
+                    <button type="submit" className="btn btn-gradient-lg">Send Message</button>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

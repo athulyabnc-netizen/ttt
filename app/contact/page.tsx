@@ -93,38 +93,23 @@ export default function Contact() {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-5 bg-primary-blue text-white">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-8">
-              <h1 className="display-4 fw-bold mb-4">Contact Us</h1>
-              <p className="lead mb-4">
-                Get in touch with TechTruck Transport for all your truck rental and logistics needs in Saudi Arabia.
-              </p>
-              <p className="mb-4">
-                Our team is available 24/7 to assist you with inquiries, quotes, and emergency transportation 
-                services. Reach out through any of the convenient methods below.
-              </p>
-              <div className="d-flex gap-3">
-                <a href="tel:+966500000000" className="btn btn-light rounded-pill">
-                  <FontAwesomeIcon icon={faPhone} className="me-2" />
-                  Call Now
-                </a>
-                <a href="https://wa.me/966500000000" className="btn btn-success rounded-pill" target="_blank" rel="noopener noreferrer">
-                  WhatsApp
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <img 
-                src="/images/contact-hero.jpg" 
-                alt="Contact Us" 
-                className="img-fluid rounded shadow"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <section
+  className="text-white d-flex justify-content-center align-items-center text-center"
+  style={{
+    minHeight: "400px",
+    backgroundImage: `
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("/images/contact-us.jpg")
+    `,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}
+>
+  <div className="container">
+    <h1 className="display-4 fw-bold">Contact Us</h1>
+  </div>
+</section>
 
       {/* Contact Form and Info */}
       <ContactForm />
@@ -137,11 +122,11 @@ export default function Contact() {
             <p className="text-muted">Our main office locations across Saudi Arabia</p>
           </div>
           <div className="row">
-            <div className="col-lg-8 mb-4">
+            <div className="col-lg-12 mb-4">
               <div className="card border-0 shadow-sm">
                 <div className="card-body p-0">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.123456!2d46.7219!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2z"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463877.3124267608!2d46.52282629411045!3d24.72545537318324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sin!4v1778741081182!5m2!1sen!2sin"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}
@@ -153,61 +138,13 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4">
-              <div className="card border-0 shadow-sm">
-                <div className="card-body p-4">
-                  <h4 className="text-primary-blue fw-bold mb-4">Quick Contact</h4>
-                  {contactInfo.map((info, index) => (
-                    <div className="contact-item mb-4" key={index}>
-                      <div className="d-flex align-items-start">
-                        <div className="icon-box bg-primary-orange bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style={{ width: '50px', height: '50px' }}>
-                          <FontAwesomeIcon icon={info.icon} className="text-primary-orange fs-5" />
-                        </div>
-                        <div>
-                          <h5 className="text-primary-blue mb-1">{info.title}</h5>
-                          {info.type === 'phone' ? (
-                            <a href={`tel:${info.content.replace(/[^0-9+]/g, '')}`} className="text-muted text-decoration-none">
-                              {info.content}
-                            </a>
-                          ) : info.type === 'email' ? (
-                            <a href={`mailto:${info.content}`} className="text-muted text-decoration-none">
-                              {info.content}
-                            </a>
-                          ) : (
-                            <p className="text-muted mb-0">{info.content}</p>
-                          )}
-                          <small className="text-muted">{info.subContent}</small>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                  
-                  <div className="mt-4">
-                    <h5 className="text-primary-blue mb-3">Follow Us</h5>
-                    <div className="d-flex gap-3">
-                      {socialLinks.map((social, index) => (
-                        <a 
-                          key={index}
-                          href={social.href}
-                          className="text-primary-blue fs-5 hover-primary-orange"
-                          aria-label={social.label}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FontAwesomeIcon icon={social.icon} />
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>
 
       {/* Office Locations */}
-      <section className="py-5">
+      {/* <section className="py-5">
         <div className="container">
           <div className="text-center mb-5">
             <h2 className="text-primary-blue fw-bold mb-3">Our Office Locations</h2>
@@ -241,10 +178,10 @@ export default function Contact() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Emergency Contact */}
-      <section className="py-5 bg-primary-orange text-white">
+      {/* <section className="py-5 bg-primary-orange text-white">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-8">
@@ -274,7 +211,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
       <WhatsAppButton />

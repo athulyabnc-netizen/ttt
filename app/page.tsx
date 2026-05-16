@@ -8,7 +8,9 @@ import TruckCard from '@/components/TruckCard';
 import HeroSection from '@/components/HeroSection';
 import ClientSection from '@/components/ClientSection';
 import FAQAccordion from '@/components/FAQAccordion';
+import GallerySection from '@/components/GallerySection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Whychooseus from '@/components/whychooseussection';
 import { 
   faTruck, 
   faTruckLoading, 
@@ -17,33 +19,36 @@ import {
   faBox,
   faTools,
   faTruckPickup,
+  faUserGear,
+  faClock,
   faAmbulance
 } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Home() {
   const services = [
     {
       icon: faTruck,
       title: 'Truck Rental',
-      description: 'Modern fleet of trucks for all your transportation needs across Saudi Arabia.',
+      description: 'Trusted, reliable, and well-maintained trucks and vehicles in all parts of Saudi Arabia for all transportation and cargo needs.',
       link: '/services'
     },
     {
       icon: faTruckLoading,
       title: 'Crane Rental',
-      description: 'Professional crane services for heavy lifting and construction projects.',
+      description: 'Renting cranes for heavy lifting, construction, and industrial projects, with operators who have professional skills and experience.',
       link: '/services'
     },
     {
       icon: faShippingFast,
       title: 'Logistics Transport',
-      description: 'Comprehensive logistics solutions for efficient supply chain management.',
+      description: 'Logistics and supply chain management solutions that provide trouble-free, timely, and safe delivery.',
       link: '/services'
     },
     {
       icon: faWeightHanging,
       title: 'Heavy Equipment Moving',
-      description: 'Specialized equipment for moving heavy machinery and industrial assets.',
+      description: 'Specialized heavy equipment, oversized equipment, and equipment handling and transportation.',
       link: '/services'
     }
   ];
@@ -95,10 +100,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { number: '50+', label: 'Modern Trucks' },
-    { number: '500+', label: 'Happy Clients' },
-    { number: '10+', label: 'Years Experience' },
-    { number: '24/7', label: 'Support Available' }
+    { number: '100+', label: 'Vehicles' },
+    { number: '50+', label: 'Regions' },
+    { number: '100+', label: 'Dedicated Staffs' },
+    { number: '100%', label: 'Efficiency' }
   ];
 
   return (
@@ -111,20 +116,16 @@ export default function Home() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4">
-              <h2 className="text-primary-blue fw-bold mb-3">Welcome to TechTruck Transport</h2>
+              <h2 className="text-primary-blue fw-bold mb-3">Welcome to Tech Truck Transport</h2>
               <p className="text-muted mb-4">
-                TechTruck Transport is your premier partner for truck rental and logistics services in Saudi Arabia. 
-                With over a decade of experience in the industry, we understand the unique transportation needs of businesses 
-                and individuals across the Kingdom.
+                Tech Truck specializes in providing your business the solutions and support that help your logistics activities run smoothly. We offer excellent trucks, reliable service, and flexible solutions for all kinds of your business needs.
               </p>
               <p className="text-muted mb-4">
-                Our commitment to excellence, safety, and reliability has made us the preferred choice for companies 
-                requiring professional transportation solutions. From heavy equipment moving to emergency transport, 
-                we deliver quality service every time.
+               Our efficient team handles both local and large-scale deliveries in the required time of customers streamlining their supply chain activities. 
               </p>
               <div className="d-flex gap-3">
                 <a href="#" className="btn btn-primary-orange rounded-pill">
-                  View  More
+                 Read  More
                 </a>
                 {/* <a href="/contact" className="btn btn-outline-primary-blue rounded-pill">
                   Contact Us
@@ -166,7 +167,7 @@ export default function Home() {
           <div>
             <h5 className="fw-bold text-primary-blue">Modern Fleet</h5>
             <p className="text-muted mb-0">
-              State-of-the-art trucks and equipment maintained to highest standards.
+              Trucks, laden trucks in perfect condition, deal with different requirements in logistics and transportation with efficiency.
             </p>
           </div>
         </div>
@@ -177,9 +178,9 @@ export default function Home() {
         <div className="d-flex">
           <FontAwesomeIcon icon={faTools} className="text-primary-orange fs-3 me-3 mt-1" />
           <div>
-            <h5 className="fw-bold text-primary-blue">Expert Team</h5>
+            <h5 className="fw-bold text-primary-blue">Reliable Logistics Support</h5>
             <p className="text-muted mb-0">
-              Experienced professionals dedicated to your transportation needs.
+             Efficient, reliable transport services that help you to maintain your business operations.
             </p>
           </div>
         </div>
@@ -188,11 +189,14 @@ export default function Home() {
       {/* Item 3 */}
       <div className="col-md-6 col-lg-3">
         <div className="d-flex">
-          <FontAwesomeIcon icon={faShippingFast} className="text-primary-orange fs-3 me-3 mt-1" />
+         <FontAwesomeIcon 
+  icon={faUserGear} 
+  className="text-primary-orange fs-3 me-3 mt-1" 
+/>
           <div>
-            <h5 className="fw-bold text-primary-blue">24/7 Service</h5>
+            <h5 className="fw-bold text-primary-blue">Experienced Team</h5>
             <p className="text-muted mb-0">
-              Round-the-clock availability for all your transportation requirements.
+             Experts who can help make your truck hire experience safe, efficient, and hassle-free.
             </p>
           </div>
         </div>
@@ -201,11 +205,11 @@ export default function Home() {
       {/* Item 4 */}
       <div className="col-md-6 col-lg-3">
         <div className="d-flex">
-          <FontAwesomeIcon icon={faTruckPickup} className="text-primary-orange fs-3 me-3 mt-1" />
+          <FontAwesomeIcon icon={faClock} className="text-primary-orange fs-3 me-3 mt-1" />
           <div>
-            <h5 className="fw-bold text-primary-blue">Full Coverage</h5>
+            <h5 className="fw-bold text-primary-blue">24/7 Availability</h5>
             <p className="text-muted mb-0">
-              Services available across all major cities in Saudi Arabia.
+             Nonstop service and transport support during your business's needs.
             </p>
           </div>
         </div>
@@ -227,8 +231,8 @@ export default function Home() {
 
         <div className="container position-relative">
           <div className="text-center mb-5">
-            <h2 className="text-white fw-bold mb-3 display-5">Our Achievements</h2>
-            <p className="text-white-50 fs-5">Numbers that speak for our excellence</p>
+            <h2 className="text-white fw-bold mb-3 display-5">Our Strengths</h2>
+            <p className="text-white-50 fs-5">The number that keeps us going</p>
           </div>
 
           {/* Modern Stats Grid */}
@@ -412,17 +416,17 @@ export default function Home() {
               <div className="mb-3">
                 <FontAwesomeIcon 
                   icon={service.icon} 
-                  className="text-primary-orange display-5" 
+                  className="text-black display-6" 
                 />
               </div>
 
               {/* TITLE */}
-              <h5 className="fw-bold text-primary-blue">
+              <h5 className="fw-bold text-black">
                 {service.title}
               </h5>
 
               {/* LINE */}
-              <div className="service-line mx-auto my-2"></div>
+              {/* <div className="service-line mx-auto my-2"></div> */}
 
               {/* DESCRIPTION */}
               <p className="text-muted small mb-0">
@@ -445,10 +449,10 @@ export default function Home() {
 
   </div>
 </section>
-<section className="py-5 bg-primary-blue text-white">
+{/* <section className="py-5 bg-primary-blue text-white">
         <div className="container text-center">
-          <h2 className="fw-bold mb-3">Ready to Transport with Us?</h2>
-          <p className="mb-4">Get in touch today for a free quote and consultation</p>
+          <h2 className="fw-bold mb-3">Realtime Support for Rentals</h2>
+          <p className="mb-4">Connect with us and we will reach you with our fleet.</p>
           <div className="d-flex justify-content-center gap-3">
             <a href="#!" className="btn btn-light btn-lg rounded-pill px-4">
               Enquire now
@@ -458,7 +462,47 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section 
+  className="py-5 text-white position-relative"
+  style={{
+    backgroundImage: 'url("/images/cta-banner.jpg")', // 👉 change image path
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '400px',
+    // backgroundAttachment: 'fixed'
+  }}
+>
+  {/* Dark overlay for readability */}
+  <div 
+    className="position-absolute top-0 start-0 w-100 h-100"
+    style={{    backgroundColor: 'rgba(0, 0, 0, 0.6)' 
+      }}
+  ></div>
+
+  <div className="container text-center position-relative">
+    <h2 className="fw-bold mb-3 display-5">
+      Realtime Support for Rentals
+    </h2>
+    <p className="mb-4 fs-5">
+      Connect with us and we will reach you with our fleet.
+    </p>
+
+    <div className="d-flex justify-content-center gap-3 flex-wrap">
+      
+      {/* Enquire Button */}
+      <a href="#!" className="btn btn-light btn-lg rounded-pill px-4">
+        Enquire Now
+      </a>
+
+      {/* Call Button */}
+      <a href="tel:+91XXXXXXXXXX" className="btn btn-outline-light btn-lg rounded-pill px-4">
+        Call Now
+      </a>
+
+    </div>
+  </div>
+</section>
       {/* Featured Trucks */}
       {/* <section className="py-5 bg-light">
         <div className="container">
@@ -481,7 +525,8 @@ export default function Home() {
         </div>
       </section> */}
 
-      
+ <Whychooseus />
+         <GallerySection />
       {/* Client Section */}
       <ClientSection />
 

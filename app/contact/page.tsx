@@ -1,3 +1,5 @@
+'use client';
+import { useRouter } from "next/navigation";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -7,6 +9,7 @@ import { faMapMarkerAlt, faPhone, faEnvelope, faClock } from '@fortawesome/free-
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function Contact() {
+    const router = useRouter();
   const contactInfo = [
     {
       icon: faMapMarkerAlt,
@@ -24,7 +27,7 @@ export default function Contact() {
     },
     {
       icon: faEnvelope,
-      title: 'Email',
+      title: 'Email', 
       content: 'info@techtruck.sa',
       subContent: 'Quick response guaranteed',
       type: 'email'

@@ -498,7 +498,7 @@ export default function Home() {
       </a>
 
       {/* Call Button */}
-      <a href="tel:+91XXXXXXXXXX" className="btn btn-outline-light btn-lg rounded-pill px-4">
+      <a href="#!" className="btn btn-outline-light btn-lg rounded-pill px-4">
         Call Now
       </a>
 

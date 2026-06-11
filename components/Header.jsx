@@ -33,10 +33,10 @@ export default function Header({ isHero = false }) {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
-    { href: '/services', label: 'Services' },
-    { href: '/trucks', label: 'Our Trucks' },
-    { href: '/contact', label: 'Contact Us' }
+    { href: '#!', label: 'About Us' },
+    { href: '#!', label: 'Services' },
+    { href: '#!', label: 'Our Trucks' },
+    { href: '#!', label: 'Contact Us' }
   ];
 
   return (

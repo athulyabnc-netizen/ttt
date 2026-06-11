@@ -66,9 +66,9 @@ export default function Header({ isHero = false }) {
               src={
                 isHero
                   ? scrolled
-                    ? '/images/ttt-logo.png'
-                    : '/images/ttt-logo-white.png'
-                  : '/images/ttt-logo.png'
+                    ? '/images/ttg-logo.png'
+                    : '/images/ttg-logo-white.png'
+                  : '/images/ttg-logo.png'
               }
               alt="TechTruck Transport"
               style={{
@@ -159,7 +159,7 @@ export default function Header({ isHero = false }) {
           >
 
             <img
-              src="/images/ttt-logo.png"
+              src="/images/ttg-logo.png"
               alt="TechTruck Transport"
               style={{ height: "70px" }}
             />

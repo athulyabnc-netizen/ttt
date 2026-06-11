@@ -45,7 +45,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-lg-4 mb-4">
             <div className="d-flex align-items-center mb-3">
-            <img src="images/ttt-logo-white.png"   alt="TechTruck Transport"
+            <img src="images/ttg-logo-white.png"   alt="TechTruck Transport"
     style={{ height: '80px', transition: '0.3s' }}/>
             </div>
             <p className="text-light">

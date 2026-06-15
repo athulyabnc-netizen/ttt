@@ -15,25 +15,25 @@ export default function ClientSection() {
     {
       name: 'Ahmed Al-Rashid',
       company: 'Riyadh Construction Co.',
-      text: 'TechTruck Transport has made our deliveries so easy and efficient; their vehicles are always in pristine condition, and they are on time and ready for every logistics need we may have in several locations',
+      text: 'TT Global has made our deliveries so easy and efficient; their vehicles are always in pristine condition, and they are on time and ready for every logistics need we may have in several locations',
       rating: 5
     },
     {
       name: 'Fatima Al-Saud',
       company: 'Jeddah Logistics',
-      text: 'TechTruck Transport has proven to be a reliable and quality option, offering flexible trucks and ensuring there were no delays or issues when handling our urgent transport needs. We have been working with several transport providers, and they have proven to be the best service to have for us',
+      text: 'TT Global has proven to be a reliable and quality option, offering flexible trucks and ensuring there were no delays or issues when handling our urgent transport needs. We have been working with several transport providers, and they have proven to be the best service to have for us',
       rating: 5
     },
     {
       name: 'Mohammed Al-Qahtani',
       company: 'Dammam Heavy Industries',
-      text: 'TechTruck Transport caters to our transportation requirements with outstanding service every time, and we are confident that it is done safely, professionally, and timely, thanks to their experienced drivers, modern fleet, and 24/7 support.',
+      text: 'TT Global caters to our transportation requirements with outstanding service every time, and we are confident that it is done safely, professionally, and timely, thanks to their experienced drivers, modern fleet, and 24/7 support.',
       rating: 5
     },
     {
       name: 'Ali Hassan',
       company: 'Saudi Movers',
-      text: 'TechTruck Transport just gave us the best services. We connect with them every time for vehicles. They does rental services professionally and timely. Our company is into logistics and we recommend Tech Truck for everyone looking for rental services..',
+      text: 'TT Global just gave us the best services. We connect with them every time for vehicles. They does rental services professionally and timely. Our company is into logistics and we recommend TT Global for everyone looking for rental services..',
       rating: 5
     }
   ];

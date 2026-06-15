@@ -4,7 +4,7 @@ import FontAwesomeConfig from "../components/FontAwesomeConfig";
 
 export const metadata: Metadata = {
   title:
-    "TechTruck Transport - Truck Rental & Logistics Services in Saudi Arabia",
+    "TT GLOBAL - Truck Rental & Logistics Services in Saudi Arabia",
   description:
     "Professional truck rental and logistics services across Saudi Arabia. Modern fleet, 24/7 service, and experienced drivers.",
 
@@ -15,17 +15,17 @@ export const metadata: Metadata = {
 },
 
   openGraph: {
-    title: "TechTruck Transport - Logistics Saudi Arabia",
+    title: "TT GLOBAL - Logistics Saudi Arabia",
     description:
       "Reliable heavy transport and logistics services across Saudi Arabia.",
     url: "https://ttt-bay-kappa.vercel.app/",
-    siteName: "TechTruck Transport",
+    siteName: "TT GLOBAL",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "TechTruck Transport Saudi Arabia"
+        alt: "TT GLOBAL Saudi Arabia"
       }
     ],
     type: "website"
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "TechTruck Transport",
+    title: "TT GLOBAL",
     description:
       "Reliable heavy transport and logistics services across Saudi Arabia.",
     images: ["/og-image.jpg"]

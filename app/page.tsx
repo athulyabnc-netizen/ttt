@@ -118,9 +118,9 @@ export default function Home() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4">
-              <h2 className="text-primary-blue fw-bold mb-3">Welcome to Tech Truck Transport</h2>
+              <h2 className="text-primary-blue fw-bold mb-3">Welcome to TT Global</h2>
               <p className="text-muted mb-4">
-                Tech Truck specializes in providing your business the solutions and support that help your logistics activities run smoothly. We offer excellent trucks, reliable service, and flexible solutions for all kinds of your business needs.
+                TT Global  specializes in providing your business the solutions and support that help your logistics activities run smoothly. We offer excellent trucks, reliable service, and flexible solutions for all kinds of your business needs.
               </p>
               <p className="text-muted mb-4">
                Our efficient team handles both local and large-scale deliveries in the required time of customers streamlining their supply chain activities. 
@@ -137,7 +137,7 @@ export default function Home() {
             <div className="col-lg-6">
               <img 
                 src="/images/about-home-page.jpg" 
-                alt="TechTruck Transport" 
+                alt="TT Global" 
                 className="img-fluid rounded shadow"
               />
             </div>
@@ -153,7 +153,7 @@ export default function Home() {
   <div className="container">
     {/* <div className="text-center mb-5">
       <h2 className="fw-bold text-primary-blue mb-3">
-        Why Choose TechTruck Transport?
+        Why Choose TT Global?
       </h2>
       <p className="text-muted">
         We deliver excellence in every journey

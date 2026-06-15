@@ -49,7 +49,7 @@ export default function Footer() {
     style={{ height: '80px', transition: '0.3s' }}/>
             </div>
             <p className="text-light">
-              Tech Truck provides you with vehicle rental services for your logistics operations.
+              TT Global provides you with vehicle rental services for your logistics operations.
               Well maintained trucks rented out for keeping your logistics activities seamless and break free.
             </p>
             <div className="d-flex gap-3 mt-3">
@@ -115,7 +115,7 @@ export default function Footer() {
               <FontAwesomeIcon icon={faEnvelope} className="text-white me-3 hover-primary-orange" />
               {/* <a href="mailto:info@techtruck.sa" className="text-light text-decoration-none"> */}
                    <a href="#!" className="text-light text-decoration-none hover-primary-orange">
-                info@techtruck.sa
+                info@ttglobal.sa
               </a>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function Footer() {
         <div className="row align-items-center">
           <div className="col-md-6">
             <p className="mb-0 text-light">
-              © {new Date().getFullYear()} Tech Truck Transport. All rights reserved.
+              © {new Date().getFullYear()} TT Global. All rights reserved.
             </p>
           </div>
           <div className="col-md-6 text-md-end">

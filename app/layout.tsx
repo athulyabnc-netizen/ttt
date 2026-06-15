@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     "Professional truck rental and logistics services across Saudi Arabia. Modern fleet, 24/7 service, and experienced drivers.",
 
      icons: {
-  icon: "images/favicon.png",
-  shortcut: "/favicon.png",
+  icon: "images/ttg-logo.png",
+  shortcut: "/ttg-logo.png",
   // apple: "/apple-touch-icon.png", 
 },
 

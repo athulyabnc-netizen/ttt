@@ -11,17 +11,19 @@ import FAQAccordion from '@/components/FAQAccordion';
 import GallerySection from '@/components/GallerySection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Whychooseus from '@/components/whychooseussection';
-import { 
-  faTruck, 
-  faTruckLoading, 
-  faShippingFast, 
+import {
+  faTruck,
+  faTruckLoading,
+  faShippingFast,
   faWeightHanging,
   faBox,
   faTools,
   faTruckPickup,
   faUserGear,
   faClock,
-  faAmbulance
+  faAmbulance,
+  faBowlFood,
+  faUtensils
 } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -51,6 +53,18 @@ export default function Home() {
       icon: faWeightHanging,
       title: 'Heavy Equipment Moving',
       description: 'Specialized heavy equipment, oversized equipment, and equipment handling and transportation.',
+      link: '/services'
+    },
+    {
+      icon: faBowlFood,
+      title: 'Restaurant',
+      description: 'Explore TT Globals restaurant and cafe, where delicious meals are cooked and served hygienically. We have a wide variety of food for all tastes and preferences, from quick bites to wholesome food.',
+      link: '/services'
+    },
+    {
+      icon: faUtensils,
+      title: 'Catering Services',
+      description: 'TT Global offers hygienic, nutritious and delicious food for labour camp catering depending on workforce requirements. The timely food supply provides good food quality, a balanced diet and customer satisfaction.',
       link: '/services'
     }
   ];
@@ -112,7 +126,7 @@ export default function Home() {
     <>
       <Header isHero={true} />
       <HeroSection />
-      
+
       {/* Company Introduction */}
       <section className="py-5">
         <div className="container">
@@ -123,11 +137,11 @@ export default function Home() {
                 TT Global  specializes in providing your business the solutions and support that help your logistics activities run smoothly. We offer excellent trucks, reliable service, and flexible solutions for all kinds of your business needs.
               </p>
               <p className="text-muted mb-4">
-               Our efficient team handles both local and large-scale deliveries in the required time of customers streamlining their supply chain activities. 
+                Our efficient team handles both local and large-scale deliveries in the required time of customers streamlining their supply chain activities.
               </p>
               <div className="d-flex gap-3">
                 <a href="#" className="btn btn-primary-orange rounded-pill">
-                 Read  More
+                  Read  More
                 </a>
                 {/* <a href="/contact" className="btn btn-outline-primary-blue rounded-pill">
                   Contact Us
@@ -135,23 +149,23 @@ export default function Home() {
               </div>
             </div>
             <div className="col-lg-6">
-              <img 
-                src="/images/about-home-page.jpg" 
-                alt="TT Global" 
+              <img
+                src="/images/about-home-page.jpg"
+                alt="TT Global"
                 className="img-fluid rounded shadow"
               />
             </div>
           </div>
-          
+
         </div>
-        
+
       </section>
 
 
       {/* Why Choose Us */}
       <section className="py-5 ">
-  <div className="container">
-    {/* <div className="text-center mb-5">
+        <div className="container">
+          {/* <div className="text-center mb-5">
       <h2 className="fw-bold text-primary-blue mb-3">
         Why Choose TT Global?
       </h2>
@@ -160,71 +174,71 @@ export default function Home() {
       </p>
     </div> */}
 
-    <div className="row g-4">
+          <div className="row g-4">
 
-      {/* Item 1 */}
-      <div className="col-md-6 col-lg-3">
-        <div className="d-flex">
-          <FontAwesomeIcon icon={faTruck} className="text-primary-orange fs-3 me-3 mt-1" />
-          <div>
-            <h5 className="fw-bold text-primary-blue">Modern Fleet</h5>
-            <p className="text-muted mb-0">
-              Trucks, laden trucks in perfect condition, deal with different requirements in logistics and transportation with efficiency.
-            </p>
+            {/* Item 1 */}
+            <div className="col-md-6 col-lg-3">
+              <div className="d-flex">
+                <FontAwesomeIcon icon={faTruck} className="text-primary-orange fs-3 me-3 mt-1" />
+                <div>
+                  <h5 className="fw-bold text-primary-blue">Modern Fleet</h5>
+                  <p className="text-muted mb-0">
+                    Trucks, laden trucks in perfect condition, deal with different requirements in logistics and transportation with efficiency.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 2 */}
+            <div className="col-md-6 col-lg-3">
+              <div className="d-flex">
+                <FontAwesomeIcon icon={faTools} className="text-primary-orange fs-3 me-3 mt-1" />
+                <div>
+                  <h5 className="fw-bold text-primary-blue">Reliable Logistics Support</h5>
+                  <p className="text-muted mb-0">
+                    Efficient, reliable transport services that help you to maintain your business operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 3 */}
+            <div className="col-md-6 col-lg-3">
+              <div className="d-flex">
+                <FontAwesomeIcon
+                  icon={faUserGear}
+                  className="text-primary-orange fs-3 me-3 mt-1"
+                />
+                <div>
+                  <h5 className="fw-bold text-primary-blue">Experienced Team</h5>
+                  <p className="text-muted mb-0">
+                    Experts who can help make your truck hire experience safe, efficient, and hassle-free.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 4 */}
+            <div className="col-md-6 col-lg-3">
+              <div className="d-flex">
+                <FontAwesomeIcon icon={faClock} className="text-primary-orange fs-3 me-3 mt-1" />
+                <div>
+                  <h5 className="fw-bold text-primary-blue">24/7 Availability</h5>
+                  <p className="text-muted mb-0">
+                    Nonstop service and transport support during your business's needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
-
-      {/* Item 2 */}
-      <div className="col-md-6 col-lg-3">
-        <div className="d-flex">
-          <FontAwesomeIcon icon={faTools} className="text-primary-orange fs-3 me-3 mt-1" />
-          <div>
-            <h5 className="fw-bold text-primary-blue">Reliable Logistics Support</h5>
-            <p className="text-muted mb-0">
-             Efficient, reliable transport services that help you to maintain your business operations.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Item 3 */}
-      <div className="col-md-6 col-lg-3">
-        <div className="d-flex">
-         <FontAwesomeIcon 
-  icon={faUserGear} 
-  className="text-primary-orange fs-3 me-3 mt-1" 
-/>
-          <div>
-            <h5 className="fw-bold text-primary-blue">Experienced Team</h5>
-            <p className="text-muted mb-0">
-             Experts who can help make your truck hire experience safe, efficient, and hassle-free.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Item 4 */}
-      <div className="col-md-6 col-lg-3">
-        <div className="d-flex">
-          <FontAwesomeIcon icon={faClock} className="text-primary-orange fs-3 me-3 mt-1" />
-          <div>
-            <h5 className="fw-bold text-primary-blue">24/7 Availability</h5>
-            <p className="text-muted mb-0">
-             Nonstop service and transport support during your business's needs.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-{/* Statistics - Modern Premium Cards */}
+      </section>
+      {/* Statistics - Modern Premium Cards */}
       <section className="py-5 position-relative overflow-hidden" style={{ backgroundImage: 'url("/images/our-achievements.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         {/* Dark Overlay for better text visibility */}
         <div className="position-absolute top-0 start-0 w-100 h-100" style={{ background: 'rgba(0, 0, 0, 0.7)' }}></div>
-        
+
         {/* Decorative Background Elements */}
         <div className="position-absolute top-0 start-0 w-100 h-100">
           <div className="position-absolute top-10 start-10 w-64 h-64 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full opacity-10 blur-3xl"></div>
@@ -243,25 +257,25 @@ export default function Home() {
               // Define icons for each stat
               const statIcons = [faTruck, faBox, faWeightHanging, faShippingFast];
               const currentIcon = statIcons[index % statIcons.length];
-              
+
               return (
                 <div className="col-6 col-lg-3 mb-4" key={index}>
                   <div className="stat-card glassmorphism-stat text-center position-relative overflow-hidden">
                     {/* Background Glow Effect */}
                     <div className="position-absolute top-0 end-0 w-32 h-32 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full opacity-5 blur-2xl"></div>
-                    
+
                     {/* Icon */}
                     {/* <div className="mb-3">
                       <div className="icon-circle bg-white/10 backdrop-blur-sm d-inline-flex align-items-center justify-content-center">
                         <FontAwesomeIcon icon={currentIcon} className="text-warning fs-3" />
                       </div>
                     </div> */}
-                    
+
                     {/* Counter Number */}
                     <div className="counter-number mb-2">
                       <h2 className="text-white fw-bold mb-0">{stat.number}</h2>
                     </div>
-                    
+
                     {/* Label */}
                     <p className="text-white mb-0">{stat.label}</p>
                   </div>
@@ -394,64 +408,64 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-     <section className="py-5 bg-light">
-  <div className="container">
+      <section className="py-5 bg-light">
+        <div className="container">
 
-    <div className="text-center mb-5">
-      <h2 className="fw-bold text-primary-blue mb-3">
-        Our Services
-      </h2>
-      <p className="text-muted">
-        Comprehensive transportation solutions for every need
-      </p>
-    </div>
+          <div className="text-center mb-5">
+            <h2 className="fw-bold text-primary-blue mb-3">
+              Our Services
+            </h2>
+            <p className="text-muted">
+              Comprehensive transportation solutions for every need
+            </p>
+          </div>
 
-    <div className="row g-4">
+          <div className="row g-4">
 
-      {services.map((service, index) => (
-        <div className="col-lg-3 col-md-6" key={index}>
+            {services.map((service, index) => (
+              <div className="col-lg-4 col-md-6" key={index}>
 
-          <div className="card border-0 shadow-sm h-100 service-card text-center">
+                <div className="card border-0 shadow-sm h-100 service-card text-center">
 
-            {/* ICON */}
-            <div className="card-body">
-              <div className="mb-3">
-                <FontAwesomeIcon 
-                  icon={service.icon} 
-                  className="text-black display-6" 
-                />
+                  {/* ICON */}
+                  <div className="card-body">
+                    <div className="mb-3">
+                      <FontAwesomeIcon
+                        icon={service.icon}
+                        className="text-black display-6"
+                      />
+                    </div>
+
+                    {/* TITLE */}
+                    <h5 className="fw-bold text-black">
+                      {service.title}
+                    </h5>
+
+                    {/* LINE */}
+                    {/* <div className="service-line mx-auto my-2"></div> */}
+
+                    {/* DESCRIPTION */}
+                    <p className="text-muted small mb-0">
+                      {service.description}
+                    </p>
+                  </div>
+
+                </div>
+
               </div>
-
-              {/* TITLE */}
-              <h5 className="fw-bold text-black">
-                {service.title}
-              </h5>
-
-              {/* LINE */}
-              {/* <div className="service-line mx-auto my-2"></div> */}
-
-              {/* DESCRIPTION */}
-              <p className="text-muted small mb-0">
-                {service.description}
-              </p>
-            </div>
+            ))}
 
           </div>
 
+          <div className="text-center mt-5">
+            <a href="#!" className="btn btn-primary-blue px-4">
+              View All Services →
+            </a>
+          </div>
+
         </div>
-      ))}
-
-    </div>
-
-    <div className="text-center mt-5">
-      <a href="#!" className="btn btn-primary-blue px-4">
-        View All Services →
-      </a>
-    </div>
-
-  </div>
-</section>
-{/* <section className="py-5 bg-primary-blue text-white">
+      </section>
+      {/* <section className="py-5 bg-primary-blue text-white">
         <div className="container text-center">
           <h2 className="fw-bold mb-3">Realtime Support for Rentals</h2>
           <p className="mb-4">Connect with us and we will reach you with our fleet.</p>
@@ -465,46 +479,47 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      <section 
-  className="py-5 text-white position-relative"
-  style={{
-    backgroundImage: 'url("/images/cta-banner.jpg")', // 👉 change image path
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '400px',
-    // backgroundAttachment: 'fixed'
-  }}
->
-  {/* Dark overlay for readability */}
-  <div 
-    className="position-absolute top-0 start-0 w-100 h-100"
-    style={{    backgroundColor: 'rgba(0, 0, 0, 0.6)' 
-      }}
-  ></div>
+      <section
+        className="py-5 text-white position-relative"
+        style={{
+          backgroundImage: 'url("/images/cta-banner.jpg")', // 👉 change image path
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '400px',
+          // backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Dark overlay for readability */}
+        <div
+          className="position-absolute top-0 start-0 w-100 h-100"
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.6)'
+          }}
+        ></div>
 
-  <div className="container text-center position-relative">
-    <h2 className="fw-bold mb-3 display-5">
-      Realtime Support for Rentals
-    </h2>
-    <p className="mb-4 fs-5">
-      Connect with us and we will reach you with our fleet.
-    </p>
+        <div className="container text-center position-relative">
+          <h2 className="fw-bold mb-3 display-5">
+            Realtime Support for Rentals
+          </h2>
+          <p className="mb-4 fs-5">
+            Connect with us and we will reach you with our fleet.
+          </p>
 
-    <div className="d-flex justify-content-center gap-3 flex-wrap">
-      
-      {/* Enquire Button */}
-      <a href="#!" className="btn btn-light btn-lg rounded-pill px-4">
-        Enquire Now
-      </a>
+          <div className="d-flex justify-content-center gap-3 flex-wrap">
 
-      {/* Call Button */}
-      <a href="#!" className="btn btn-outline-light btn-lg rounded-pill px-4">
-        Call Now
-      </a>
+            {/* Enquire Button */}
+            <a href="#!" className="btn btn-light btn-lg rounded-pill px-4">
+              Enquire Now
+            </a>
 
-    </div>
-  </div>
-</section>
+            {/* Call Button */}
+            <a href="#!" className="btn btn-outline-light btn-lg rounded-pill px-4">
+              Call Now
+            </a>
+
+          </div>
+        </div>
+      </section>
       {/* Featured Trucks */}
       {/* <section className="py-5 bg-light">
         <div className="container">
@@ -527,8 +542,8 @@ export default function Home() {
         </div>
       </section> */}
 
- <Whychooseus />
-         <GallerySection />
+      <Whychooseus />
+      <GallerySection />
       {/* Client Section */}
       <ClientSection />
 
@@ -553,7 +568,7 @@ export default function Home() {
       </section> */}
 
       {/* Contact CTA */}
-      
+
 
       <Footer />
       <WhatsAppButton />

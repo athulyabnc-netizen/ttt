@@ -33,11 +33,14 @@ export default function GallerySection() {
   // PROJECT GALLERY
  const galleryImages = [
   { src: '/images/project1.jpg', name: 'Name1' },
+  { src: '/images/project-9.jpg', name: 'Name9' },
   { src: '/images/project2.jpg', name: 'Name2' },
+  { src: '/images/project-8.jpg', name: 'Name8' },
   { src: '/images/project3.jpg', name: 'Name3' },
-  { src: '/images/project4.jpg', name: 'Name4' },
   { src: '/images/project5.jpg', name: 'Name5' },
-  { src: '/images/project6.jpg', name: 'Name6' }
+  { src: '/images/project4.jpg', name: 'Name4' },
+  { src: '/images/project6.jpg', name: 'Name6' },
+  { src: '/images/project-7.jpg', name: 'Name7' }
 ];
 
   // TIMELINE

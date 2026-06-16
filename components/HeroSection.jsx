@@ -52,6 +52,38 @@ const slides = [
     //   { icon: faTruck, title: '10+ Years', subtitle: 'Experience' },
     //   { icon: faTruck, title: '100% Satisfaction', subtitle: 'Guaranteed' }
     // ]
+  },
+  {
+    id: 4,
+    image: '/banner/hero-img-4.jpeg',
+    title: 'Welcome to savour the flavours',
+    subtitle: 'Gifting you a comfortable and delicious dining',
+    // description: 'Comprehensive logistics services tailored to your specific industry needs. From warehousing to final delivery, we handle it all.',
+    buttons: [
+      // { text: 'Our Services', link: '/services', icon: faTruck, class: 'btn-info' },
+      // { text: 'Contact Team', link: '/contact', icon: faPhone, class: 'btn-success' }
+        { text: 'View More', link: '/#', icon: faTruck, class: 'btn-slider' },
+    ],
+    // stats: [
+    //   { icon: faTruck, title: '10+ Years', subtitle: 'Experience' },
+    //   { icon: faTruck, title: '100% Satisfaction', subtitle: 'Guaranteed' }
+    // ]
+  },
+  {
+    id: 5,
+    image: '/banner/hero-img-5.jpeg',
+    title: 'Catering Your Nutrition Needs',
+    subtitle: 'Delivering bulk and small batch delicious food.',
+    // description: 'Comprehensive logistics services tailored to your specific industry needs. From warehousing to final delivery, we handle it all.',
+    buttons: [
+      // { text: 'Our Services', link: '/services', icon: faTruck, class: 'btn-info' },
+      // { text: 'Contact Team', link: '/contact', icon: faPhone, class: 'btn-success' }
+        { text: 'View More', link: '/#', icon: faTruck, class: 'btn-slider' },
+    ],
+    // stats: [
+    //   { icon: faTruck, title: '10+ Years', subtitle: 'Experience' },
+    //   { icon: faTruck, title: '100% Satisfaction', subtitle: 'Guaranteed' }
+    // ]
   }
 ];
 

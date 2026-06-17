@@ -63,21 +63,21 @@ export default function ContactForm() {
     {
       icon: faEnvelope,
       title: 'Email',
-      content: 'info@ttglobal.sa',
-      href: 'mailto:info@ttglobal.sa'
+      content: 'info@ttglobalservice.com',
+      href: 'mailto:info@ttglobalservice.com'
     },
     {
       icon: faMapMarkerAlt,
       title: 'Address',
       content: 'Kingdom of Saudi Arabia',
       href: '#'
-    },
-    {
-      icon: faClock,
-      title: 'Business Hours',
-      content: '24/7 Available',
-      href: '#'
     }
+    // {
+    //   icon: faClock,
+    //   title: 'Business Hours',
+    //   content: '24/7 Available',
+    //   href: '#'
+    // }
   ];
 
   return (

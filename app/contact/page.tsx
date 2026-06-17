@@ -31,14 +31,14 @@ export default function Contact() {
       content: 'info@techtruck.sa',
       subContent: 'Quick response guaranteed',
       type: 'email'
-    },
-    {
-      icon: faClock,
-      title: 'Business Hours',
-      content: '24/7 Available',
-      subContent: 'Emergency services always ready',
-      type: 'hours'
     }
+    // {
+    //   icon: faClock,
+    //   title: 'Business Hours',
+    //   content: '24/7 Available',
+    //   subContent: 'Emergency services always ready',
+    //   type: 'hours'
+    // }
   ];
 
   const socialLinks = [
@@ -129,7 +129,7 @@ export default function Contact() {
               <div className="card border-0 shadow-sm">
                 <div className="card-body p-0">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7456526.091818713!2d39.78304680050422!3d24.14078598928169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e7b33fe7952a41%3A0x5960504bc21ab69b!2sSaudi%20Arabia!5e0!3m2!1sen!2sin!4v1781690021311!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d475322.9478382058!2d38.8815035435853!3d21.45043937820486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xe059579737b118db!2sJeddah%20Saudi%20Arabia!5e0!3m2!1sen!2sin!4v1781699646220!5m2!1sen!2sin"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}

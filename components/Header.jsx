@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -12,8 +13,8 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 export default function Header({ isHero = false }) {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -35,9 +36,11 @@ export default function Header({ isHero = false }) {
     { href: '/', label: 'Home' },
     { href: '#!', label: 'About Us' },
     { href: '#!', label: 'Services' },
-    { href: '#!', label: 'Our Trucks' },
-    { href: '#!', label: 'Contact Us' }
+    { href: '/contact', label: 'Contact Us' }
   ];
+
+  const isActive = (href) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
     <>
@@ -104,9 +107,8 @@ export default function Header({ isHero = false }) {
 
                 <li className="nav-item" key={index}>
 
-                  {/* NEXT LINK = NO REFRESH */}
                   <Link
-                    className="nav-link fw-medium"
+                    className={`nav-link fw-medium${isActive(link.href) ? ' nav-link-active' : ''}`}
                     href={link.href}
                   >
                     {link.label}
@@ -119,9 +121,9 @@ export default function Header({ isHero = false }) {
             </ul>
 
             {/* RIGHT BUTTON */}
-
+ {/* href="tel:+966500000000" */}
             <a
-              href="tel:+966500000000"
+              href="#!"
               className="btn btn-primary-orange rounded-pill px-3"
             >
               <FontAwesomeIcon
@@ -183,9 +185,9 @@ export default function Header({ isHero = false }) {
 
             <li key={index}>
 
-              {/* NEXT LINK = NO PAGE REFRESH */}
               <Link
                 href={link.href}
+                className={isActive(link.href) ? 'mobile-nav-active' : ''}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

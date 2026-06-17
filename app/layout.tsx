@@ -3,29 +3,27 @@ import "./globals.css";
 import FontAwesomeConfig from "../components/FontAwesomeConfig";
 
 export const metadata: Metadata = {
-  title:
-    "TT GLOBAL - Truck Rental & Logistics Services in Saudi Arabia",
+  title: "TT Global | Truck Rental & Logistics Services in Saudi Arabia",
   description:
-    "Professional truck rental and logistics services across Saudi Arabia. Modern fleet, 24/7 service, and experienced drivers.",
+    "TT Global provides professional truck rental, crane rental, and logistics services across Saudi Arabia. Modern fleet, experienced drivers, and 24/7 availability.",
 
-     icons: {
-  icon: "images/ttg-favicon.png",
-  shortcut: "images/ttg-favicon.png",
-  // apple: "/apple-touch-icon.png", 
-},
+  icons: {
+    icon: "images/ttg-favicon.png",
+    shortcut: "images/ttg-favicon.png",
+  },
 
   openGraph: {
-    title: "TT GLOBAL - Logistics Saudi Arabia",
+    title: "TT Global | Truck Rental & Logistics Services in Saudi Arabia",
     description:
-      "Reliable heavy transport and logistics services across Saudi Arabia.",
+      "Professional truck rental, crane rental, and logistics services across Saudi Arabia. Modern fleet, experienced drivers, and 24/7 availability.",
     url: "https://ttt-bay-kappa.vercel.app/",
-    siteName: "TT GLOBAL",
+    siteName: "TT Global",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "TT GLOBAL Saudi Arabia"
+        alt: "TT Global Saudi Arabia"
       }
     ],
     type: "website"
@@ -33,9 +31,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "TT GLOBAL",
+    title: "TT Global | Truck Rental & Logistics Services in Saudi Arabia",
     description:
-      "Reliable heavy transport and logistics services across Saudi Arabia.",
+      "Professional truck rental, crane rental, and logistics services across Saudi Arabia.",
     images: ["/og-image.jpg"]
   }
 };

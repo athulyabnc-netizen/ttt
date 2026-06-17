@@ -229,6 +229,24 @@ html {
 .navbar-hero .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+/* Active nav link — sticky navbar */
+.navbar-sticky .nav-link-active {
+  color: #ff6b35 !important;
+  font-weight: 700 !important;
+}
+
+/* Active nav link — hero navbar (white text context) */
+.navbar-hero .nav-link-active {
+  color: #ffb28b !important;
+  font-weight: 700 !important;
+}
+
+/* Active nav link — mobile menu */
+.mobile-nav .mobile-nav-active {
+  color: #ff6b35 !important;
+  font-weight: 700;
+}
 .btn-slider{
   border:1px solid white;
   color:white;
@@ -282,7 +300,7 @@ html {
 .contact-section {
   background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   /* ensure section sits below any absolute/fixed banners or hero header */
   padding-top: 5.5rem; /* ~88px - gives space from banner/header */
   padding-bottom: 3.5rem;
@@ -326,7 +344,7 @@ html {
 
 .contact-icon {
   width: 56px; height:56px; border-radius:50%;
-  background: radial-gradient(circle at 30% 30%, #fff0ea 0%, #ffecd6 20%, rgba(255,255,255,0) 35%), linear-gradient(180deg,#ffb28b,#ff6b35);
+  background: linear-gradient(180deg,#ffb28b,#ff6b35);
   box-shadow: 0 8px 24px rgba(255,107,53,0.18), 0 2px 8px rgba(0,0,0,0.12), inset 0 2px 6px rgba(255,255,255,0.12);
   color: white;
   transition: transform 0.18s ease, box-shadow 0.18s ease;

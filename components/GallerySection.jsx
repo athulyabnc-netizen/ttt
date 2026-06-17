@@ -154,9 +154,9 @@ export default function GallerySection() {
      <section className="py-5 bg-light">
   <div className="container">
     <div className="text-center mb-5">
-      <h2 className="fw-bold">Fleet gallery </h2>
+      <h2 className="fw-bold">Gallery</h2>
       <p className="text-muted">
-        Explore our range of vehicles and our scope of functioning
+        Explore our projects and activities here
       </p>
     </div>
 

@@ -1,10 +1,8 @@
 'use client';
-import { useRouter } from "next/navigation";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ServiceCard from '@/components/ServiceCard';
-import TruckCard from '@/components/TruckCard';
 import HeroSection from '@/components/HeroSection';
 import ClientSection from '@/components/ClientSection';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -28,8 +26,6 @@ import {
 
 
 export default function Home() {
-  const router = useRouter();
-
   const services = [
     {
       icon: faTruck,
@@ -66,33 +62,6 @@ export default function Home() {
       title: 'Catering Services',
       description: 'TT Global offers hygienic, nutritious and delicious food for labour camp catering depending on workforce requirements. The timely food supply provides good food quality, a balanced diet and customer satisfaction.',
       link: '/services'
-    }
-  ];
-
-  const featuredTrucks = [
-    {
-      name: 'Heavy Duty Flatbed',
-      image: '/images/truck1.jpg',
-      capacity: '20 tons capacity',
-      availability: 'Available',
-      description: 'Perfect for heavy equipment and large cargo transportation.',
-      link: '/trucks/flatbed'
-    },
-    {
-      name: 'Mobile Crane Truck',
-      image: '/images/truck2.jpg',
-      capacity: '15 tons lifting',
-      availability: 'Available',
-      description: 'Versatile crane truck for construction and industrial lifting.',
-      link: '/trucks/crane'
-    },
-    {
-      name: 'Container Trailer',
-      image: '/images/truck3.jpg',
-      capacity: '40ft container',
-      availability: 'Available',
-      description: 'Specialized trailer for container transport and shipping.',
-      link: '/trucks/trailer'
     }
   ];
 
@@ -508,7 +477,7 @@ export default function Home() {
           <div className="d-flex justify-content-center gap-3 flex-wrap">
 
             {/* Enquire Button */}
-            <a href="#!" className="btn btn-light btn-lg rounded-pill px-4">
+            <a href="/contact" className="btn btn-light btn-lg rounded-pill px-4">
               Enquire Now
             </a>
 
@@ -520,28 +489,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Featured Trucks */}
-      {/* <section className="py-5 bg-light">
-        <div className="container">
-          <div className="text-center mb-5">
-            <h2 className="text-primary-blue fw-bold mb-3">Featured Trucks</h2>
-            <p className="text-muted">Our most popular vehicles ready for your projects</p>
-          </div>
-          <div className="row g-4">
-            {featuredTrucks.map((truck, index) => (
-              <div className="col-lg-4 col-md-6" key={index}>
-                <TruckCard truck={truck} />
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-4">
-            <a href="/trucks" className="btn btn-primary-orange rounded-pill px-4">
-              View All Trucks
-            </a>
-          </div>
-        </div>
-      </section> */}
-
       <Whychooseus />
       <GallerySection />
       {/* Client Section */}

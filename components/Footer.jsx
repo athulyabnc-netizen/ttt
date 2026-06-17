@@ -1,10 +1,9 @@
 'use client';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faTruck, 
-  faPhone, 
-  faEnvelope, 
+import {
+  faPhone,
+  faEnvelope,
   faMapMarkerAlt
 } from '@fortawesome/free-solid-svg-icons';
 import { 
@@ -18,17 +17,7 @@ export default function Footer() {
   const quickLinks = [
     { href: '/', label: 'Home' },
     { href: '#!', label: 'About Us' },
-    { href: '#!', label: 'Services' },
-    { href: '#!', label: 'Our Trucks' }
-  ];
-
-  const serviceLinks = [
-    { href: '/services', label: 'Truck Rental' },
-    { href: '/services', label: 'Crane Rental' },
-    { href: '/services', label: 'Logistics Transport' },
-    { href: '/services', label: 'Heavy Equipment Moving' },
-    { href: '/services', label: 'Container Transport' },
-    { href: '/services', label: 'Emergency Transport' }
+    { href: '/services', label: 'Services' }
   ];
 
   const socialLinks = [

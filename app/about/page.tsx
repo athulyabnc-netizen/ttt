@@ -79,72 +79,60 @@ export default function About() {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-5 bg-primary-blue text-white">
+      <section
+        className="text-white d-flex justify-content-center align-items-center text-center"
+        style={{
+          minHeight: '400px',
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("/images/about-us-banner.jpg")`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <h1 className="display-4 fw-bold mb-4">About TechTruck Transport</h1>
-              <p className="lead mb-4">
-                Your trusted partner for professional truck rental and logistics services in Saudi Arabia since 2014.
-              </p>
-              <p className="mb-4">
-                We pride ourselves on delivering excellence, reliability, and innovation in every transportation solution we provide.
-              </p>
-              <div className="d-flex gap-3">
-                <a href="/contact" className="btn btn-light rounded-pill">
-                  Contact Us
-                </a>
-                <a href="/services" className="btn btn-outline-light rounded-pill">
-                  Our Services
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <img 
-                src="/images/about-hero.jpg" 
-                alt="About TechTruck Transport" 
-                className="img-fluid rounded shadow"
-              />
-            </div>
-          </div>
+          <h1 className="display-4 fw-bold">About Us</h1>
         </div>
       </section>
 
-      {/* Company Overview */}
+      {/* Our Story */}
       <section className="py-5">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="text-center mb-5">
-                <h2 className="text-primary-blue fw-bold mb-3">Our Story</h2>
-                <p className="text-muted">Building trust through excellence in transportation</p>
-              </div>
-              <div className="row">
-                <div className="col-lg-6 mb-4">
-                  <p className="text-muted">
-                    Founded in 2014, TechTruck Transport started as a small family business with a vision to revolutionize 
-                    the truck rental and logistics industry in Saudi Arabia. Our commitment to quality service and customer 
-                    satisfaction has helped us grow into one of the most trusted transportation companies in the Kingdom.
-                  </p>
-                  <p className="text-muted">
-                    Over the years, we have expanded our fleet, diversified our services, and built a team of dedicated 
-                    professionals who share our passion for excellence. Today, we serve hundreds of clients across various 
-                    industries, from construction to retail, manufacturing to logistics.
-                  </p>
-                </div>
-                <div className="col-lg-6 mb-4">
-                  <p className="text-muted">
-                    Our success is built on three core principles: reliability, safety, and innovation. We invest heavily 
-                    in modern equipment, continuous training for our team, and cutting-edge technology to ensure that we 
-                    deliver the best possible service to our clients.
-                  </p>
-                  <p className="text-muted">
-                    As we look to the future, we remain committed to our founding values while embracing new technologies 
-                    and expanding our capabilities to meet the evolving needs of Saudi Arabia's growing economy.
-                  </p>
-                </div>
-              </div>
+          <div className="row align-items-center g-5">
+
+            {/* Image */}
+            <div className="col-lg-6">
+              <img
+                src="/images/about-home-page.jpg"
+                alt="TT Global"
+                className="img-fluid rounded-3 shadow"
+              />
             </div>
+
+            {/* Text */}
+            <div className="col-lg-6">
+              <h2 className="text-primary-blue fw-bold mb-3">Our Story</h2>
+              <div style={{ width: '50px', height: '3px', background: '#ff6b35', marginBottom: '20px', borderRadius: '2px' }} />
+              <p className="text-muted mb-3">
+                TT Global is a newly established logistics and transportation company in Saudi Arabia, built with a clear mission — to deliver reliable, professional, and efficient transport solutions that businesses can count on from day one.
+              </p>
+              <p className="text-muted mb-4">
+                Our team brings deep expertise in truck rental, crane operations, heavy equipment moving, and logistics management. We are committed to setting a new standard of service quality in the Kingdom.
+              </p>
+              <ul className="list-unstyled mb-0">
+                {[
+                  'Reliable and on-time delivery across Saudi Arabia',
+                  'Modern fleet maintained to the highest standards',
+                  'Experienced team available 24/7',
+                  'Comprehensive logistics solutions for every industry',
+                ].map((point, i) => (
+                  <li key={i} className="d-flex align-items-start mb-2">
+                    <span className="me-2 mt-1 flex-shrink-0" style={{ color: '#ff6b35', fontSize: '1.1rem' }}>✓</span>
+                    <span className="text-muted">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
           </div>
         </div>
       </section>

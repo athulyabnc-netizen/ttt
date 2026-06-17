@@ -2,16 +2,23 @@
 
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faMapMarkerAlt, faClock, faCheckCircle, faTimesCircle, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    service: '',
+    subject: '',
     message: ''
   });
+
+  const [toast, setToast] = useState(null);
+
+  const showToast = (type, message) => {
+    setToast({ type, message });
+    setTimeout(() => setToast(null), 5000);
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -33,15 +40,15 @@ export default function ContactForm() {
 
         const data = await res.json();
         if (res.ok && data.success) {
-          alert('Thank you — your message was sent. We will contact you soon.');
-          setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+          showToast('success', 'Thank you — your message was sent. We will contact you soon.');
+          setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
         } else {
           console.error('Send failed:', data);
-          alert('Sorry, something went wrong sending your message.');
+          showToast('error', 'Sorry, something went wrong sending your message.');
         }
       } catch (err) {
         console.error('Send error:', err);
-        alert('Unable to send message at this time.');
+        showToast('error', 'Unable to send message at this time.');
       }
     })();
   };
@@ -56,13 +63,13 @@ export default function ContactForm() {
     {
       icon: faEnvelope,
       title: 'Email',
-      content: 'athulyabnc@gmail.com',
-      href: 'mailto:athulyabnc@gmail.com'
+      content: 'info@ttglobal.sa',
+      href: 'mailto:info@ttglobal.sa'
     },
     {
       icon: faMapMarkerAlt,
       title: 'Address',
-      content: 'Riyadh, Saudi Arabia',
+      content: 'Kingdom of Saudi Arabia',
       href: '#'
     },
     {
@@ -84,7 +91,7 @@ export default function ContactForm() {
       <div className="container">
         <div className="row align-items-center gx-5">
           <div className="col-lg-5 mb-4">
-            <div className="contact-left p-5">
+            <div className="contact-left p-3 p-lg-5">
               <h3 className="mb-3 text-white display-6 fw-semibold">Get in touch</h3>
               <p className="text-white-90 mb-4">We're available 24/7 to help with quotes, bookings and emergency transport.</p>
 
@@ -108,14 +115,14 @@ export default function ContactForm() {
               </div>
 
               <div className="mt-4">
-                <a href="tel:+966500000000" className="btn premium-cta me-2">Call Now</a>
-                <a href="https://wa.me/966500000000" target="_blank" rel="noreferrer" className="btn secondary-cta">WhatsApp</a>
+                <a href="#!" className="btn btn-primary-orange me-2 px-3 rounded-pill">Call Now</a>
+                <a href="#!" target="_blank" rel="noreferrer" className="btn secondary-cta">WhatsApp</a>
               </div>
             </div>
           </div>
 
           <div className="col-lg-7">
-            <div className="contact-right p-5">
+            <div className="contact-right p-3 p-lg-5">
               <h4 className="mb-4 fw-semibold">Send us a message</h4>
               <form onSubmit={handleSubmit}>
                 <div className="row g-3">
@@ -154,27 +161,21 @@ export default function ContactForm() {
                       id="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="+966 5X XXX XXXX"
+                      placeholder="Enter your phone number"
                       required
                     />
                   </div>
                   <div className="col-md-6">
-                    <label className="form-label">Service</label>
-                    <select
-                      className="form-select large-input"
-                      id="service"
-                      name="service"
-                      value={formData.service}
+                    <label className="form-label">Subject</label>
+                    <input
+                      className="form-control large-input"
+                      type="text"
+                      name="subject"
+                      id="subject"
+                      value={formData.subject}
                       onChange={handleInputChange}
-                    >
-                      <option value="">Select a service</option>
-                      <option value="truck-rental">Truck Rental</option>
-                      <option value="crane-rental">Crane Rental</option>
-                      <option value="logistics">Logistics Transport</option>
-                      <option value="heavy-equipment">Heavy Equipment Moving</option>
-                      <option value="container">Container Transport</option>
-                      <option value="emergency">Emergency Transport</option>
-                    </select>
+                      placeholder="How can we help?"
+                    />
                   </div>
                   <div className="col-12">
                     <label className="form-label">Message</label>
@@ -190,7 +191,7 @@ export default function ContactForm() {
                     ></textarea>
                   </div>
                   <div className="col-12 text-end">
-                    <button type="submit" className="btn btn-gradient-lg">Send Message</button>
+                    <button type="submit" className="btn btn-primary-orange rounded-pill">Send Message</button>
                   </div>
                 </div>
               </form>
@@ -198,6 +199,35 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
+
+      {/* Toast notification */}
+      {toast && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '2rem',
+            right: '2rem',
+            zIndex: 9999,
+            minWidth: '320px',
+            maxWidth: '420px',
+          }}
+        >
+          <div className={`d-flex align-items-start gap-3 p-4 rounded-3 shadow-lg text-white ${toast.type === 'success' ? 'bg-success' : 'bg-danger'}`}>
+            <FontAwesomeIcon
+              icon={toast.type === 'success' ? faCheckCircle : faTimesCircle}
+              className="fs-5 mt-1 flex-shrink-0"
+            />
+            <span className="flex-grow-1 fw-medium">{toast.message}</span>
+            <button
+              onClick={() => setToast(null)}
+              className="btn p-0 text-white opacity-75 lh-1"
+              aria-label="Close"
+            >
+              <FontAwesomeIcon icon={faXmark} />
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

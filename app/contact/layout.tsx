@@ -9,12 +9,21 @@ export const metadata: Metadata = {
     description:
       'Reach out to TT Global for quotes, bookings, and emergency transport support. We are available 24/7 across Saudi Arabia.',
     url: 'https://ttt-bay-kappa.vercel.app/contact',
+    images: [
+      {
+        url: '/ttglobal-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'TT Global Saudi Arabia',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact TT Global | Truck Rental & Logistics Saudi Arabia',
     description:
       'Reach out to TT Global for quotes, bookings, and emergency transport support. Available 24/7.',
+    images: ['/ttglobal-og.jpg'],
   },
 };
 

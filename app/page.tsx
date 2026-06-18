@@ -427,7 +427,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-5">
-            <a href="#!" className="btn btn-primary-blue px-4">
+            <a href="/services" className="btn btn-primary-blue px-4">
               View All Services →
             </a>
           </div>

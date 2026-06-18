@@ -1,68 +1,90 @@
+import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ServiceCard from '@/components/ServiceCard';
 
+export const metadata: Metadata = {
+  title: 'Our Services | Truck Rental, Crane & Logistics in Saudi Arabia | TT Global',
+  description: 'TT Global offers truck rental, crane rental, logistics transport, heavy equipment moving, container transport & emergency services across Saudi Arabia. Get a free quote today.',
+  openGraph: {
+    title: 'Our Services | Truck Rental, Crane & Logistics in Saudi Arabia | TT Global',
+    description: 'TT Global offers truck rental, crane rental, logistics transport, heavy equipment moving, container transport & emergency services across Saudi Arabia. Get a free quote today.',
+    images: [{ url: '/ttglobal-og.jpg', width: 1200, height: 630, alt: 'TT Global Services Saudi Arabia' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Services | Truck Rental, Crane & Logistics in Saudi Arabia | TT Global',
+    description: 'TT Global offers truck rental, crane rental, logistics transport, heavy equipment moving, container transport & emergency services across Saudi Arabia.',
+    images: ['/ttglobal-og.jpg'],
+  },
+};
+
 export default function Services() {
   const services = [
     {
       title: 'Truck Rental',
-      description: 'Comprehensive truck rental services with modern fleet including flatbeds, pickups, and heavy-duty trucks for all your transportation needs across Saudi Arabia.',
-      link: '#truck-rental',
+      description: 'Modern fleets for construction, industrial, and commercial transportation and delivery with trusted solutions for truck rental in accordance with the time are secure, efficient, and safe.',
+      link: '/services/truck-rental',
       image: '/images/truck-rental.jpg'
     },
     {
       title: 'Crane Rental',
-      description: 'Professional crane rental services with certified operators for construction, industrial lifting, and heavy equipment movement projects.',
-      link: '#crane-rental',
+      description: 'Perfect for heavy lifting, construction, equipment installation, and industrial operations by professionals operating cranes.',
+      link: '/services/crane-rental',
       image: '/images/crane-rental.jpg'
     },
     {
       title: 'Logistics Transport',
-      description: 'End-to-end logistics solutions including supply chain management, warehousing, and distribution services tailored to your business requirements.',
-      link: '#logistics',
+      description: 'End-to-end logistics solutions that can be integrated into business operations to reduce the time it requires for transporting, storing, distributing, and order processing.',
+      link: '/services/logistics-transport',
       image: '/images/logistic-transport.jpg'
     },
     {
       title: 'Heavy Equipment Moving',
-      description: 'Specialized transportation services for heavy machinery, construction equipment, and industrial assets with proper safety protocols.',
-      link: '#heavy-equipment',
+      description: 'Heavy equipment moving services for safe transportation of large machinery with expertise and specialized equipment.',
+      link: '/services/heavy-equipment-moving',
       image: '/images/heavyequipment-moving.jpg'
     },
     {
       title: 'Container Transport',
-      description: 'Professional container transport services for shipping containers, storage containers, and cargo containers across KSA.',
-      link: '#container-transport',
+      description: 'Port and warehouse, industrial facility, safe and reliable container transport, timely delivery, and professional handling.',
+      link: '/services/container-transport',
       image: '/images/container-transport.jpg'
     },
     {
       title: 'Machinery Lifting',
-      description: 'Expert machinery lifting services using advanced equipment and trained operators for industrial and commercial applications.',
-      link: '#machinery-lifting',
+      description: 'Heavy machinery rigging with precision machinery lifts by advanced equipment and certified operators for safe and efficient heavy-asset relocation.',
+      // link: '/services/machinery-lifting',
+        link: '#!',
       image: '/images/machienery-lifting.jpg'
     },
     {
       title: 'Cargo Transport',
-      description: 'Reliable cargo transport services for goods, materials, and products with proper handling and timely delivery across Saudi Arabia.',
-      link: '#cargo-transport',
+      description: 'Safe and reliable commercial goods, industrial material, and bulk transport offering safe and reliable handling and delivery.',
+      // link: '/services/cargo-transport',
+      link: '#!',
       image: '/images/cargo-transport.jpg'
     },
     {
       title: 'Emergency Transport',
-      description: '24/7 emergency transport services for urgent transportation needs with rapid response and dedicated support team.',
-      link: '#emergency-transport',
+      description: 'Round-the-clock emergency transport options for reliable and efficient logistics in urgent situations.',
+      // link: '/services/emergency-transport',
+        link: '#!',
       image: '/images/emergency-transport.jpg'
     },
     {
       title: 'Restaurant',
-      description: "Explore TT Global's restaurant and cafe, where delicious meals are cooked and served hygienically. We have a wide variety of food for all tastes and preferences, from quick bites to wholesome food.",
-      link: '#restaurant',
+      description: "Select freshly prepared meals, beverages, and quality meals with a variety of menu items selected in inviting and comfortable surroundings.",
+      // link: '/services/restaurant',
+       link: '#!',
       image: '/images/restaurant.jpg'
     },
     {
       title: 'Catering Services',
-      description: 'TT Global offers hygienic, nutritious and delicious food for labour camp catering depending on workforce requirements. The timely food supply provides good food quality, a balanced diet and customer satisfaction.',
-      link: '#catering',
+      description: 'Professional catering solutions providing healthy food that is hygienic and appealing for labor camps, corporate functions, industrial camps, and special gatherings.',
+      // link: '/services/catering-services',
+         link: '#!',
       image: '/images/catering-services.jpg'
     }
   ];
@@ -78,7 +100,7 @@ export default function Services() {
           marginTop: '90px',
           paddingTop: '4rem',
           minHeight: '480px',
-          backgroundImage: 'url("/images/services.jpg")',
+          backgroundImage: 'url("/images/our-services.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -97,8 +119,8 @@ export default function Services() {
       <section className="py-5">
         <div className="container">
           <div className="text-center mb-5">
-            <h2 className="text-primary-blue fw-bold mb-3">Complete Transportation Solutions</h2>
-            <p className="text-muted">Professional services for all your transportation needs</p>
+            <h2 className="text-primary-blue fw-bold mb-3">Complete Transportation and Food Solutions</h2>
+            <p className="text-muted">Serving equipment and services that streamline your operations.</p>
           </div>
           <div className="row row-cols-1 row-cols-md-2 g-4">
             {services.map((service, index) => (

@@ -47,6 +47,69 @@ body {
   color: white;
 }
 
+.commitment-card {
+  transition: transform 0.2s ease;
+}
+
+.commitment-card:hover {
+  transform: translateY(-6px);
+}
+
+.commitment-strip-item {
+  transition: transform 0.25s ease;
+  cursor: default;
+  position: relative;
+}
+
+.commitment-strip-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 40%;
+  height: 3px;
+  background: #ff6b35;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.commitment-strip-item:hover {
+  transform: translateY(-4px);
+}
+
+.commitment-strip-item:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.commitment-strip-item:hover span {
+  color: #ff6b35 !important;
+}
+
+.commitment-strip-item:hover .rounded-circle {
+  background: rgba(255, 107, 53, 0.25) !important;
+  transform: scale(1.12);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.mission-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(255, 107, 53, 0.18) !important;
+}
+
+.vision-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vision-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 37, 84, 0.18) !important;
+}
+
 .btn-primary-blue {
   background-color: var(--primary-blue);
   border-color: var(--primary-blue);
@@ -527,6 +590,16 @@ html {
   font-size: 42px;
   font-weight: 800;
   color: #0f172a;
+}
+
+.type-card {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.13);
 }
 
 .section-subtitle {

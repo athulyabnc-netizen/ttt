@@ -16,7 +16,7 @@ import {
 export default function Footer() {
   const quickLinks = [
     { href: '/', label: 'Home' },
-    { href: '#!', label: 'About Us' },
+    { href: '/about', label: 'About Us' },
     { href: '/services', label: 'Services' }
   ];
 
@@ -34,8 +34,8 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-lg-4 mb-4">
             <div className="d-flex align-items-center mb-3">
-            <img src="images/ttg-logo-white.png"   alt="TechTruck Transport"
-    style={{ height: '80px', transition: '0.3s' }}/>
+            <img src="/images/ttg-logo-white.png" alt="TechTruck Transport"
+    style={{ height: '80px', transition: '0.3s' }} />
             </div>
             <p className="text-light">
               TT Global provides you with vehicle rental services for your logistics operations.

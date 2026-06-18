@@ -34,7 +34,7 @@ export default function Header({ isHero = false }) {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
+    { href: '#!', label: 'About Us' },
     { href: '/services', label: 'Services' },
     { href: '/contact', label: 'Contact Us' }
   ];

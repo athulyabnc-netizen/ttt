@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     description: 'Learn about TT Global — a trusted provider of truck rental, crane rental, logistics, and transportation services across Saudi Arabia.',
     images: [{ url: '/images/ttglobal-og.jpg', width: 1200, height: 630, alt: 'TT Global Saudi Arabia' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us | TT Global Saudi Arabia',
+    description: 'Learn about TT Global — a trusted provider of truck rental, crane rental, logistics, and transportation services across Saudi Arabia.',
+    images: ['/images/ttglobal-og.jpg'],
+  },
 };
 
 export default function About() {

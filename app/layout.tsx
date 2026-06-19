@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "TT Global",
     images: [
       {
-        url: "/ttglobal-og.jpg",
+        url: "/images/ttglobal-og.jpg",
         width: 1200,
         height: 630,
         alt: "TT Global Saudi Arabia"
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "TT Global | Truck Rental & Logistics Services in Saudi Arabia",
     description:
       "Professional truck rental, crane rental, and logistics services across Saudi Arabia.",
-    images: ["/ttglobal-og.jpg"]
+    images: ["/images/ttglobal-og.jpg"]
   }
 };
 

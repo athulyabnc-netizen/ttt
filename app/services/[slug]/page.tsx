@@ -31,7 +31,7 @@ const services: Record<string, ServiceData> = {
   'truck-rental': {
     title: 'Truck Rental',
     tagline: 'Reliable trucks for every cargo need',
-    image: '/images/truck-rental.jpg',
+    image: '/images/truck-rental.png',
     overview:
       'Keep operations running smoothly, rent out a truck to delivery and have goods moved from site to site, for industrial transport or for large-scale logistics. Home delivery is available and we have a selection of a variety of well-maintained vehicles to suit all cargo needs supported by professional and prompt service.\n\nOur flexible rates, reliable service and safety guarantee your cargo arrives on time and in good order',
     stats: [
@@ -59,7 +59,7 @@ const services: Record<string, ServiceData> = {
   'crane-rental': {
     title: 'Crane Rental',
     tagline: 'Precision lifting for every project',
-    image: '/images/crane-detail.jpg',
+    image: '/images/crane-rental.png',
     overview:
       'Effective crane rental solutions are crafted to handle tasks that require accuracy, force, and safety. We can offer a state of the art fleet of cranes with highly skilled operators to suit the needs of the construction site, factory installation or heavy mobile equipment transfer or infrastructure project.\n\nRental flexibility along with rigorous safety protocols and dependable support services ensures that businesses can handle large-scale lifting tasks safely and efficiently, on time.',
     stats: [
@@ -87,7 +87,7 @@ const services: Record<string, ServiceData> = {
   'logistics-transport': {
     title: 'Logistics Transport',
     tagline: 'Seamless supply chain from start to finish',
-    image: '/images/logistic-transport.jpg',
+    image: '/images/logistic-transport.png',
     overview:
       'Our logistics supply services provide businesses throughout Saudi Arabia with complete solutions for product movement from one point to another, ensuring safe, efficient, and fast transportation. Technology, expertise, and efficient fleet management from local deliveries to regional logistics to warehousing and last-mile delivery help your business run smoothly.\n\n We specialize in optimization, safety & timeliness—thereby helping our clients to reduce their costs and optimize their value chains.',
     stats: [
@@ -115,7 +115,7 @@ const services: Record<string, ServiceData> = {
   'heavy-equipment-moving': {
     title: 'Heavy Equipment Moving',
     tagline: 'Safe transport of your most critical assets',
-    image: '/images/heavyequipment-moving.jpg',
+    image: '/images/heavyequipment-moving.png',
     overview:
       'The services we offer include safe, efficient, and reliable heavy equipment moving solutions to transport equipment for construction, industrial, oil & gas, and infrastructure projects all over Saudi Arabia. The use of machinery and oversized equipment, such as excavators and cranes, is carefully kept planned and plotted from start to finish. We are backed by dedicated trailers, trained staff, and safety protocols, we are able to carry out complex moves with minimal downtime, ensuring they deliver to your project site on time.',
     stats: [
@@ -143,7 +143,7 @@ const services: Record<string, ServiceData> = {
   'container-transport': {
     title: 'Container Transport',
     tagline: 'Reliable container handling across KSA',
-    image: '/images/container-transport.jpg',
+    image: '/images/container-transport.png',
     overview:
       'With our container transport services, you can be guaranteed to move shipping containers across Saudi Arabia in a reliable and efficient manner. From loading/unloading containers at ports, moving cargo from one warehouse to another or delivering goods to industrial locations, our specialized, towering fleet maintains safe and timely operations. Our experienced drivers, advanced planning, and dedication to security help businesses streamline supply chains and ensure cargo movement without delay.',
     stats: [
@@ -171,7 +171,7 @@ const services: Record<string, ServiceData> = {
   'machinery-lifting': {
     title: 'Machinery Lifting',
     tagline: 'Expert hoisting for industrial applications',
-    image: '/images/machinery-detail.jpg',
+    image: '/images/machinery-detail.png',
     overview:
       'TT Global delivers professional machinery lifting services using advanced hoisting equipment and certified riggers. From factory floor relocations to placing equipment at height, our lifting team ensures every job is executed with precision, speed, and uncompromising safety.',
     stats: [
@@ -199,7 +199,7 @@ const services: Record<string, ServiceData> = {
   'cargo-transport': {
     title: 'Cargo Transport',
     tagline: 'Your goods delivered safely, every time',
-    image: '/images/cargo-transport.jpg',
+    image: '/images/cargo-transport.png',
     overview:
       'TT Global offers reliable cargo transport services for businesses across Saudi Arabia. Whether you need regular deliveries or a one-off shipment, our fleet and experienced drivers are ready to move your goods safely, on schedule, and at competitive rates.',
     stats: [
@@ -227,7 +227,7 @@ const services: Record<string, ServiceData> = {
   'emergency-transport': {
     title: 'Emergency Transport',
     tagline: '24/7 rapid response when it matters most',
-    image: '/images/emergency-transport.jpg',
+    image: '/images/emergency-transport.png',
     overview:
       'When time is critical, TT Global\'s emergency transport team is ready to respond. Available 24 hours a day, 7 days a week, our emergency fleet is strategically positioned across Saudi Arabia to provide the fastest possible response to urgent transportation needs.',
     stats: [
@@ -255,7 +255,7 @@ const services: Record<string, ServiceData> = {
   'restaurant': {
     title: 'Restaurant',
     tagline: 'A taste of comfort, served with care',
-    image: '/images/restaurant-detail.jpg',
+    image: '/images/restaurant-detail.png',
     overview:
       'At TT Global\'s restaurant and café, we believe great food is the foundation of a productive day. We serve a diverse, hygienically prepared menu of wholesome meals, quick bites, and refreshing beverages — all made fresh and served in a clean, comfortable environment for all tastes and preferences.',
     stats: [
@@ -283,7 +283,7 @@ const services: Record<string, ServiceData> = {
   'catering-services': {
     title: 'Catering Services',
     tagline: 'Nutritious meals delivered at scale',
-    image: '/images/catering-detail.jpg',
+    image: '/images/catering-detail.png',
     overview:
       'TT Global provides professional catering solutions for labour camps, corporate offices, and large-scale events across Saudi Arabia. We specialise in preparing and delivering hygienic, nutritionally balanced, and delicious meals to large groups — consistently, reliably, and on schedule.',
     stats: [
@@ -345,13 +345,13 @@ export async function generateMetadata({
     openGraph: {
       title: seo.title,
       description: seo.description,
-      images: [{ url: '/ttglobal-og.jpg', width: 1200, height: 630, alt: `TT Global ${service.title}` }],
+      images: [{ url: '/images/ttglobal-og.jpg', width: 1200, height: 630, alt: `TT Global ${service.title}` }],
     },
     twitter: {
       card: 'summary_large_image',
       title: seo.title,
       description: seo.description,
-      images: ['/ttglobal-og.jpg'],
+      images: ['/images/ttglobal-og.jpg'],
     },
   };
 }

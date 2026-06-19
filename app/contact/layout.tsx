@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: 'https://ttt-bay-kappa.vercel.app/contact',
     images: [
       {
-        url: '/ttglobal-og.jpg',
+        url: '/images/ttglobal-og.jpg',
         width: 1200,
         height: 630,
         alt: 'TT Global Saudi Arabia',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Contact TT Global | Truck Rental & Logistics Saudi Arabia',
     description:
       'Reach out to TT Global for quotes, bookings, and emergency transport support. Available 24/7.',
-    images: ['/ttglobal-og.jpg'],
+    images: ['/images/ttglobal-og.jpg'],
   },
 };
 

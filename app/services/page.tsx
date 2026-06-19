@@ -95,14 +95,11 @@ export default function Services() {
       
       {/* Hero Section */}
       <section
-        className="pb-5 text-white position-relative"
+        className="pb-5 text-white position-relative page-hero-lg"
         style={{
           marginTop: '90px',
           paddingTop: '4rem',
-          minHeight: '480px',
           backgroundImage: 'url("/images/our-services.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
         }}
       >
         {/* Dark overlay */}
@@ -110,7 +107,7 @@ export default function Services() {
           className="position-absolute top-0 start-0 w-100 h-100"
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
         />
-        <div className="container position-relative d-flex align-items-center justify-content-center" style={{ minHeight: '400px' }}>
+        <div className="container position-relative d-flex align-items-center justify-content-center page-hero-inner">
           <h1 className="display-4 fw-bold text-center mb-0">Our Services</h1>
         </div>
       </section>

@@ -97,16 +97,12 @@ export default function Contact() {
       
       {/* Hero Section */}
       <section
-  className="text-white d-flex justify-content-center align-items-center text-center"
+  className="text-white d-flex justify-content-center align-items-center text-center page-hero"
   style={{
-    minHeight: "400px",
     backgroundImage: `
       linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
       url("/images/contact-us.jpg")
     `,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
   }}
 >
   <div className="container">

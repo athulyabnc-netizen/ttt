@@ -388,12 +388,9 @@ export default async function ServiceDetailPage({
 
       {/* ── Hero Banner ── */}
       <section
-        className="text-white d-flex align-items-end pb-5"
+        className="text-white d-flex align-items-end pb-5 page-hero-lg"
         style={{
-          minHeight: '500px',
           backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.78) 100%), url("${service.image}")`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
           marginTop: '90px',
         }}
       >

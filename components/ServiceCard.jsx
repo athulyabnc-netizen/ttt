@@ -7,10 +7,9 @@ export default function ServiceCard({ title, description, link, image }) {
 
   return (
     <div
-      className="position-relative overflow-hidden rounded-3"
+      className="position-relative overflow-hidden rounded-3 service-card-bg"
       onClick={() => router.push(link)}
       style={{
-        height: '420px',
         backgroundImage: `url(${image})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',

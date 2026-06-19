@@ -26,17 +26,17 @@ export default function About() {
     {
       icon: faAward,
       title: 'Industry Leader',
-      description: 'Recognized as one of the top truck rental companies in Saudi Arabia'
+      description: 'Ensure safe, reliable, and timely transportation and logistics.'
     },
     {
       icon: faTruck,
       title: 'Modern Fleet',
-      description: '50+ modern trucks and equipment maintained to highest standards'
+      description: 'Make sure heavy equipment is operated by professionals using the highest safety standards.'
     },
     {
       icon: faMapMarkerAlt,
       title: 'Nationwide Coverage',
-      description: 'Services available across all major cities in Saudi Arabia'
+      description: 'Provide quality meals, the freshest and healthiest, in our restaurant and catering services.'
     }
   ];
 
@@ -46,13 +46,9 @@ export default function About() {
       
       {/* Hero Section */}
       <section
-        className="text-white d-flex justify-content-center align-items-center text-center"
+        className="text-white d-flex justify-content-center align-items-center text-center page-hero"
         style={{
-          minHeight: '400px',
           backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("/images/about-us-banner.jpg")`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
         }}
       >
         <div className="container">
@@ -70,8 +66,7 @@ export default function About() {
               <img
                 src="/images/who-we-are.jpg"
                 alt="TT Global Team"
-                className="img-fluid rounded-4 shadow"
-                style={{ objectFit: 'cover', width: '100%', height: '460px' }}
+                className="about-section-img shadow"
               />
             </div>
 
@@ -82,15 +77,15 @@ export default function About() {
                 WHO WE ARE
               </span>
               <h2 className="fw-bold mb-4" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.6rem)', lineHeight: 1.25 }}>
-                <span style={{ color: '#002554' }}>Reliable, Professional,</span>{' '}
-                <span style={{ color: '#c0c8d8' }}>And Efficient Transport Solutions For Saudi Arabia</span>
+                <span style={{ color: '#002554' }}>Reliablity. Commitment. Excellence</span>{' '}
+                {/* <span style={{ color: '#c0c8d8' }}>And Efficient Transport Solutions For Saudi Arabia</span> */}
               </h2>
               <p className="mb-3" style={{ color: '#555', lineHeight: 1.9, fontSize: '0.97rem' }}>
-                TT Global is a newly established logistics and transportation company in Saudi Arabia, built with a clear mission — to deliver reliable, professional, and efficient transport solutions that businesses can count on from day one.
+               TT Global is a trusted company of intermodal, logistics, equipment hire, and hospitality service operating in Saudi Arabia. We provide reliable and project sptcific solutions to businesses' based on their requirements for truck hire, crane rental, catering, or logistics transport to restaurant operations, catering services, and more. With our highly trained team, state-of-the-art vehicles, and commitment to providing service of the highest caliber, we thrive in safety, efficiency, and service. We keep looking for new horizons that can give us reliable support and flawless service in every project we undertake so as to build long-term partnerships.
               </p>
-              <p className="mb-4" style={{ color: '#555', lineHeight: 1.9, fontSize: '0.97rem' }}>
+              {/* <p className="mb-4" style={{ color: '#555', lineHeight: 1.9, fontSize: '0.97rem' }}>
                 Our team brings deep expertise in truck rental, crane operations, heavy equipment moving, and logistics management. We are committed to setting a new standard of service quality in the Kingdom.
-              </p>
+              </p> */}
             </div>
 
            
@@ -136,17 +131,16 @@ export default function About() {
                   <h3 className="text-primary-blue fw-bold mb-0">Our Mission</h3>
                 </div>
                 <p className="text-muted mb-4" style={{ lineHeight: '1.8' }}>
-                  To provide reliable, efficient, and professional transportation solutions that exceed our clients'
-                  expectations while contributing to the growth and development of Saudi Arabia's logistics sector.
+                  To deliver dependable transportation, equipment and logistics services, hospitality services & quality resources, and resources with skilled personnel who put the client/patient in focus for producing lasting value.
                 </p>
-                <div className="d-flex flex-column gap-2">
+                {/* <div className="d-flex flex-column gap-2">
                   {['Deliver excellence in every service', 'Maintain highest safety standards', 'Innovate and adapt to market needs'].map((point, i) => (
                     <div key={i} className="d-flex align-items-center gap-2">
                       <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#ff6b35', fontSize: '0.9rem', flexShrink: 0 }} />
                       <span className="text-muted" style={{ fontSize: '0.95rem' }}>{point}</span>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -160,17 +154,16 @@ export default function About() {
                   <h3 className="text-primary-blue fw-bold mb-0">Our Vision</h3>
                 </div>
                 <p className="text-muted mb-4" style={{ lineHeight: '1.8' }}>
-                  To be the leading truck rental and logistics company in Saudi Arabia, recognized for our
-                  innovation, reliability, and commitment to customer satisfaction.
+                To develop long-term collaborations based on trust and innovation while being a leader in the Kingdom for integrated service provision in the areas of logistics, equipment rental, and catering solutions.
                 </p>
-                <div className="d-flex flex-column gap-2">
+                {/* <div className="d-flex flex-column gap-2">
                   {['Expand our modern fleet and services', 'Embrace cutting-edge technology', 'Build lasting client relationships'].map((point, i) => (
                     <div key={i} className="d-flex align-items-center gap-2">
                       <FontAwesomeIcon icon={faCheckCircle} style={{ color: '#002554', fontSize: '0.9rem', flexShrink: 0 }} />
                       <span className="text-muted" style={{ fontSize: '0.95rem' }}>{point}</span>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -197,7 +190,7 @@ export default function About() {
               </h2>
               <div style={{ width: '45px', height: '3px', background: '#ff6b35', borderRadius: '2px', marginBottom: '16px' }} />
               <p className="text-muted mb-4" style={{ fontSize: '0.95rem', lineHeight: 1.8 }}>
-                We go beyond transportation — delivering trust, precision, and professionalism on every job across Saudi Arabia.
+                We strive to provide safe, reliable, and efficient services with integrity, with all our clients successfully achieving complete satisfaction, professionalism, quality, and timely delivery in all our operations.
               </p>
               {achievements.map((achievement, index) => (
                 <div key={index} className="d-flex align-items-start gap-4 py-3" style={{ borderBottom: index < achievements.length - 1 ? '1px solid #f0f0f0' : 'none' }}>
@@ -219,8 +212,7 @@ export default function About() {
               <img
                 src="/images/why-choose-us-about.jpg"
                 alt="Why Choose TT Global"
-                className="img-fluid rounded-4 shadow"
-                style={{ objectFit: 'cover', width: '100%', height: '480px' }}
+                className="about-section-img shadow"
               />
             </div>
           </div>
@@ -254,25 +246,81 @@ export default function About() {
       </section> */}
 
       {/* CTA */}
-      <section className="py-5" style={{ background: 'linear-gradient(135deg, #060d1a 0%, #0d1f3c 100%)' }}>
-        <div className="container">
-          <div className="row align-items-center g-4">
-            <div className="col-lg-8">
-              <h2 className="text-white fw-bold mb-2" style={{ fontSize: 'clamp(1.4rem, 3vw, 2.2rem)' }}>
-                Ready to Move Your Cargo Across Saudi Arabia?
+      <section
+        className="position-relative overflow-hidden"
+        style={{ background: '#f1f3f5', padding: '72px 0' }}
+      >
+        {/* Top orange accent line */}
+        <div className="position-absolute top-0 start-0 w-100" style={{ height: '4px', background: 'linear-gradient(90deg, #ff6b35, #ffaa80, #ff6b35)' }} />
+
+        {/* Decorative background circles */}
+        <div className="position-absolute" style={{ top: '-90px', right: '-90px', width: '340px', height: '340px', borderRadius: '50%', background: 'rgba(255,107,53,0.08)' }} />
+        <div className="position-absolute" style={{ bottom: '-70px', left: '-70px', width: '260px', height: '260px', borderRadius: '50%', background: 'rgba(0,37,84,0.05)' }} />
+
+        <div className="container position-relative" style={{ zIndex: 1 }}>
+          <div className="row align-items-center g-5">
+
+            {/* Left — heading + stats */}
+            <div className="col-lg-6">
+              <span style={{ color: '#ff6b35', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase' }}>
+                Let's Work Together
+              </span>
+              <div style={{ width: '40px', height: '3px', background: '#ff6b35', borderRadius: '2px', margin: '10px 0 20px' }} />
+              <h2 className="fw-bold mb-3" style={{ color: '#002554', fontSize: 'clamp(1.7rem, 3.5vw, 2.6rem)', lineHeight: 1.2 }}>
+                Want to move your Cargo across Saudi Arabia?
               </h2>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1rem', marginBottom: 0 }}>
-                Get in touch with our team today and let us deliver a tailored logistics solution for your business.
+              <p style={{ color: '#555', fontSize: '1rem', lineHeight: 1.8, marginBottom: '36px' }}>
+               Seamless operations and innovative cargo solutions are delivered for the timely conclusion of your projects.
               </p>
+
+              {/* Mini stats */}
+              <div className="d-flex gap-4 flex-wrap">
+                {[
+                  { value: '100+', label: 'Vehicles' },
+                  { value: '50+',  label: 'Regions'  },
+                  { value: '24/7', label: 'Support'  },
+                ].map((s, i) => (
+                  <div key={i}>
+                    <div className="fw-bold" style={{ fontSize: '1.6rem', color: '#ff6b35', lineHeight: 1 }}>{s.value}</div>
+                    <div style={{ color: '#888', fontSize: '0.8rem', marginTop: '4px' }}>{s.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="col-lg-4 d-flex gap-3 justify-content-lg-end flex-wrap">
-              <a href="/contact" className="btn btn-primary-orange px-4 py-2 rounded-pill fw-semibold" style={{ whiteSpace: 'nowrap' }}>
-                Get a Quote
-              </a>
-              <a href="tel:+966" className="btn px-4 py-2 rounded-pill fw-semibold" style={{ border: '2px solid rgba(255,255,255,0.5)', color: '#fff', whiteSpace: 'nowrap' }}>
-                Call Us Now
-              </a>
+
+            {/* Right — action card */}
+            <div className="col-lg-6">
+              <div
+                className="rounded-4 p-4 p-lg-5"
+                style={{
+                  background: '#fff',
+                  border: '1px solid #dee2e6',
+                  boxShadow: '0 8px 32px rgba(0,37,84,0.08)',
+                }}
+              >
+                <h4 className="fw-bold mb-2" style={{ color: '#002554' }}>Get Started Today</h4>
+                <p style={{ color: '#666', fontSize: '0.93rem', lineHeight: 1.75, marginBottom: '28px' }}>
+                 Connect us with your cargo requirements and we  deliver you with business appropriate solutions.
+                </p>
+                <div className="d-flex flex-column gap-3">
+                  <a
+                    href="/contact"
+                    className="btn btn-primary-orange rounded-pill fw-semibold py-3"
+                    style={{ fontSize: '1rem' }}
+                  >
+                    Request a Free Quote
+                  </a>
+                  <a
+                    href="#!"
+                    className="btn rounded-pill fw-semibold py-3"
+                    style={{ border: '1.5px solid #002554', color: '#002554', fontSize: '1rem' }}
+                  >
+                    Call +966 50 000 0000
+                  </a>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>

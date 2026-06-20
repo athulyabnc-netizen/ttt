@@ -109,7 +109,7 @@ export default function Home() {
                 Our efficient team handles both local and large-scale deliveries in the required time of customers streamlining their supply chain activities.
               </p>
               <div className="d-flex gap-3">
-                <a href="#" className="btn btn-primary-orange rounded-pill">
+                <a href="/about" className="btn btn-primary-orange rounded-pill">
                   Read  More
                 </a>
                 {/* <a href="/contact" className="btn btn-outline-primary-blue rounded-pill">

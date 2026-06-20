@@ -14,10 +14,17 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
-  const quickLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
-    { href: '/services', label: 'Services' }
+  const serviceLinks = [
+    { href: '/services/truck-rental', label: 'Truck Rental' },
+    { href: '/services/crane-rental', label: 'Crane Rental' },
+    { href: '/services/logistics-transport', label: 'Logistics Transport' },
+    { href: '/services/heavy-equipment-moving', label: 'Heavy Equipment Moving' },
+    { href: '/services/container-transport', label: 'Container Transport' },
+    { href: '/services/machinery-lifting', label: 'Machinery Lifting' },
+    { href: '/services/cargo-transport', label: 'Cargo Transport' },
+    { href: '/services/emergency-transport', label: 'Emergency Transport' },
+    { href: '/services/restaurant', label: 'Restaurant' },
+    { href: '/services/catering-services', label: 'Catering Services' },
   ];
 
   const socialLinks = [
@@ -55,18 +62,34 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="col-lg-4  mb-4">
-            <h5 className="text-white mb-3">Quick Links</h5>
-            <ul className="list-unstyled">
-              {quickLinks.map((link, index) => (
-                <li key={index} className="mb-2">
-                  <a href={link.href} className="text-light text-decoration-none hover-primary-orange">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {/* Services Links */}
+          <div className="col-lg-4 mb-4">
+            <div className="row">
+              <div className="col-6">
+                <h5 className="text-white mb-3">Quick Links</h5>
+                <ul className="list-unstyled">
+                  {serviceLinks.slice(0, 5).map((link, index) => (
+                    <li key={index} className="mb-2">
+                      <a href={link.href} className="text-light text-decoration-none hover-primary-orange">
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="col-6">
+                <h5 className="text-white mb-3">Quick Links</h5>
+                <ul className="list-unstyled">
+                  {serviceLinks.slice(5).map((link, index) => (
+                    <li key={index} className="mb-2">
+                      <a href={link.href} className="text-light text-decoration-none hover-primary-orange">
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Services */}

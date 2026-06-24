@@ -113,7 +113,7 @@ export default function Footer() {
               <FontAwesomeIcon icon={faMapMarkerAlt} className="text-white me-3 hover-primary-orange" />
               <div>
                 {/* <p className="mb-0 text-light">Riyadh, Saudi Arabia</p> */}
-                <p className="mb-0 text-light hover-primary-orange" >{`TT Global Company\n2569 Al Nadi\n7975 Al Aziziyah Dist.\nJEDDAH 23333\nKingdom of Saudi Arabia`}</p>
+                <p className="mb-0 text-light hover-primary-orange" >{`TT Global Company,\n2569 Al Nadi,\n7975,Al Aziziyah Dist,\nJEDDAH,23333\n,Kingdom of Saudi Arabia`}</p>
               </div>
             </div>
             <div className="d-flex align-items-center mb-3">

@@ -57,8 +57,8 @@ export default function ContactForm() {
     {
       icon: faPhone,
       title: 'Phone',
-      content: '+966 50 000 0000',
-      href: 'tel:+966500000000'
+      content: '+966 056232021',
+      href: 'tel:+966 056232021'
     },
     {
       icon: faEnvelope,
@@ -69,7 +69,7 @@ export default function ContactForm() {
     {
       icon: faMapMarkerAlt,
       title: 'Address',
-      content: 'Kingdom of Saudi Arabia',
+      content: `TT Global Company\n2569 Al Nadi\n7975 Al Aziziyah Dist.\nJEDDAH 23333\nKingdom of Saudi Arabia`,
       href: '#!'
     }
     // {
@@ -108,14 +108,14 @@ export default function ContactForm() {
                     </div>
                     <div>
                       <div className="small text-white-70">{info.title}</div>
-                      <div className="fw-medium">{info.content}</div>
+                      <div className="fw-medium" style={{ whiteSpace: 'pre-line' }}>{info.content}</div>
                     </div>
                   </a>
                 ))}
               </div>
 
               <div className="mt-4">
-                <a href="#!" className="btn btn-primary-orange me-2 px-3 rounded-pill">Call Now</a>
+                <a href="tel:+966 056232021" className="btn btn-primary-orange me-2 px-3 rounded-pill">Call Now</a>
                 <a href="#!" target="_blank" rel="noreferrer" className="btn secondary-cta">WhatsApp</a>
               </div>
             </div>

@@ -113,7 +113,7 @@ export default function Footer() {
               <FontAwesomeIcon icon={faMapMarkerAlt} className="text-white me-3 hover-primary-orange" />
               <div>
                 {/* <p className="mb-0 text-light">Riyadh, Saudi Arabia</p> */}
-                <p className="mb-0 text-light hover-primary-orange">Jeddah,KSA</p>
+                <p className="mb-0 text-light hover-primary-orange" >{`TT Global Company\n2569 Al Nadi\n7975 Al Aziziyah Dist.\nJEDDAH 23333\nKingdom of Saudi Arabia`}</p>
               </div>
             </div>
             <div className="d-flex align-items-center mb-3">
@@ -126,7 +126,7 @@ export default function Footer() {
             <div className="d-flex align-items-center">
               <FontAwesomeIcon icon={faEnvelope} className="text-white me-3 hover-primary-orange" />
               {/* <a href="mailto:info@techtruck.sa" className="text-light text-decoration-none"> */}
-                   <a href="#!" className="text-light text-decoration-none hover-primary-orange">
+                   <a href="mailto:info@ttglobalservice.com" className="text-light text-decoration-none hover-primary-orange">
                 info@ttglobalservice.com
               </a>
             </div>

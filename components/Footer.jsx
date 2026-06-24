@@ -119,8 +119,8 @@ export default function Footer() {
             <div className="d-flex align-items-center mb-3">
               <FontAwesomeIcon icon={faPhone} className="text-white me-3 hover-primary-orange" />
               {/* <a href="tel:+966500000000" className="text-light text-decoration-none"> */}
-                <a href="#!" className="text-light text-decoration-none hover-primary-orange">
-                +966 50 000 0000
+                <a href="tel:+96656232021" className="text-light text-decoration-none hover-primary-orange">
+                +966 056232021
               </a>
             </div>
             <div className="d-flex align-items-center">

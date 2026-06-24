@@ -230,10 +230,10 @@ export default function Header({ isHero = false }) {
               style={{ color: '#ff6b35', flexShrink: 0, fontSize: '18px' }}
             />
             <a
-              href="tel:+966500000000"
+              href="tel:+966 056232021"
               style={{ color: '#555', textDecoration: 'none', fontSize: '18px', fontWeight: '600' }}
             >
-              +966 50 000 0000
+              +966 056232021
             </a>
           </div>
 
